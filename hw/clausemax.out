@@ -1,0 +1,12 @@
+{"ds": "mnist", "C": 10, "theta": 0.95, "seed": 1, "max_per_5ep": [76, 73, 72, 73, 72, 73, 71, 73], "overall": 76, "limit": 119, "val40": 0.8902}
+{"ds": "mnist", "C": 10, "theta": 0.95, "seed": 101, "max_per_5ep": [72, 71, 73, 73, 74, 71, 74, 73], "overall": 74, "limit": 119, "val40": 0.8853}
+{"ds": "fmnist", "C": 5, "theta": 0.9, "seed": 1, "max_per_5ep": [38, 36, 41, 36, 37, 37, 36, 38], "overall": 41, "limit": 59, "val40": 0.7522}
+{"ds": "fmnist", "C": 5, "theta": 0.9, "seed": 101, "max_per_5ep": [37, 40, 36, 36, 36, 35, 40, 36], "overall": 40, "limit": 59, "val40": 0.7473}
+{"ds": "fmnist", "C": 10, "theta": 0.9, "seed": 1, "max_per_5ep": [39, 42, 40, 43, 38, 37, 38, 39], "overall": 43, "limit": 59, "val40": 0.7842}
+{"ds": "fmnist", "C": 10, "theta": 0.9, "seed": 101, "max_per_5ep": [40, 38, 38, 40, 38, 39, 37, 37], "overall": 40, "limit": 59, "val40": 0.7835}
+{"ds": "fmnist", "C": 20, "theta": 0.9, "seed": 1, "max_per_5ep": [40, 39, 37, 38, 39, 40, 37, 38], "overall": 40, "limit": 59, "val40": 0.7987}
+{"ds": "fmnist", "C": 20, "theta": 0.9, "seed": 101, "max_per_5ep": [41, 39, 37, 40, 39, 39, 39, 40], "overall": 41, "limit": 59, "val40": 0.784}
+{"ds": "har", "C": 5, "theta": 0.9, "seed": 1, "max_per_5ep": [52, 48, 51, 44, 46, 44, 45, 43], "overall": 52, "limit": 59, "val40": 0.9552}
+{"ds": "har", "C": 5, "theta": 0.9, "seed": 101, "max_per_5ep": [60, 48, 44, 49, 44, 42, 49, 46], "overall": 60, "limit": 59, "val40": 0.9429}
+{"ds": "har", "C": 10, "theta": 0.9, "seed": 1, "max_per_5ep": [55, 47, 51, 45, 48, 47, 46, 43], "overall": 55, "limit": 59, "val40": 0.9552}
+{"ds": "har", "C": 10, "theta": 0.9, "seed": 101, "max_per_5ep": [49, 48, 53, 44, 47, 44, 49, 45], "overall": 53, "limit": 59, "val40": 0.9606}
