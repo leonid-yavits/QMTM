@@ -26,6 +26,7 @@ doi:10.1016/j.eswa.2026.134830).
 | `prep_data.py`, `prep_imdb.py` | MNIST, Fashion-MNIST, UCI Adult and IMDb encodings (as in AP(TM)) |
 | `study1/` | Study 1: R1 and QM against the vanilla TM, 13 datasets, 20 encodings, 48 cells. `PROTOCOL.md`, data preparation, `train.py`, selection, statistics, job lists and all logs |
 | `study2/` | Study 2: out-of-sample density rule (part C, six new datasets) and clause-budget sweep (part B, C = 40, 80, 160) |
+| `study4/` | Baseline controls: extended vanilla TM family (L = 32, s = 1.5) on all study-1 and study-2 cells, and a re-tuned vanilla TM in the budget sweep |
 | `hw/qmtm_hw.py` | analytical AP(TM) cost model of the additions (projections, not measurements) |
 | `hw/clausemax.py` | largest-clause check behind the clamped QM tolerance (`clausemax.out`) |
 | `paper/` | scripts that build the paper's tables, number macros and figures from the logs |
@@ -38,6 +39,8 @@ configuration, seed, validation curve and test accuracy.
 * `study1/logs/tune.jsonl` (1,560 tuning runs, seed 1, validation), `confirm.jsonl` (1,440 test runs, seeds 101 to 105),
   `selection.json`, `stats1.json`, `stats1.txt`.
 * `study2/logs/tune.jsonl`, `confirmC.jsonl` (density rule), `sweep.jsonl` (budget sweep), `selection2.json`, `stats2.json`.
+* `study4/logs/tuneD1_s1.jsonl`, `tuneD1_s2.jsonl`, `tuneD2.jsonl` (tuning), `confirmD1.jsonl`, `confirmD2.jsonl` (test runs),
+  `selection4.json`, `stats4.json`, `sweep4.json`.
 
 ## Reproducing
 
@@ -52,6 +55,9 @@ configuration, seed, validation curve and test accuracy.
 3. Study 1: `study1/pipeline.sh` (tuning, selection, confirmation), then `python3 study1/stats1.py`.
 4. Study 2: run every line of `study2/jobs/tuneC.txt`, then `python3 study2/select2.py`, then `study2/pipeline4.sh`
    (density-rule confirmations and budget sweep), then `python3 study2/stats2.py`.
+5. Baseline controls: `python3 study4/make_jobs4.py`, then `study4/pipeline6.sh` (tuning, selection, confirmation),
+   then `python3 study4/stats4.py` and `python3 study4/sweep4.py`. `pipeline5.sh` to `pipeline8.sh` are the restarts
+   used in our runs. Each skips runs that are already logged.
 
 The scripts use absolute paths rooted at `/home/claude/qmtm` (code) and `/home/claude/data` (encoded data).
 Replace these prefixes to run elsewhere.

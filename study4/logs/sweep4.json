@@ -1,0 +1,296 @@
+{
+ "adult": {
+  "5": {
+   "acc": 83.17466816801446,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "10": {
+   "acc": 84.43375302828676,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "20": {
+   "acc": 84.42010441191525,
+   "cfg": "AND_L32",
+   "s": 2.5,
+   "changed": true
+  },
+  "40": {
+   "acc": 84.88074521445388,
+   "cfg": "AND_L64",
+   "s": 2.5,
+   "changed": false
+  },
+  "80": {
+   "acc": 85.04452861091207,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "160": {
+   "acc": 84.76814412938889,
+   "cfg": "AND_L32",
+   "s": 2.5,
+   "changed": true
+  }
+ },
+ "mnist": {
+  "5": {
+   "acc": 82.46,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "10": {
+   "acc": 87.66666666666667,
+   "cfg": "AND_L64",
+   "s": 2.5,
+   "changed": false
+  },
+  "20": {
+   "acc": 89.69999999999999,
+   "cfg": "AND_L32",
+   "s": 5.0,
+   "changed": true
+  },
+  "40": {
+   "acc": 90.49666666666667,
+   "cfg": "AND_L64",
+   "s": 5.0,
+   "changed": false
+  },
+  "80": {
+   "acc": 90.83,
+   "cfg": "AND_L64",
+   "s": 5.0,
+   "changed": false
+  },
+  "160": {
+   "acc": 91.07666666666667,
+   "cfg": "AND_L64",
+   "s": 5.0,
+   "changed": false
+  }
+ },
+ "fmnist": {
+  "5": {
+   "acc": 72.51333333333334,
+   "cfg": "AND_L32",
+   "s": 2.5,
+   "changed": true
+  },
+  "10": {
+   "acc": 74.27,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "20": {
+   "acc": 76.12666666666667,
+   "cfg": "AND_L32",
+   "s": 2.5,
+   "changed": true
+  },
+  "40": {
+   "acc": 76.11333333333334,
+   "cfg": "AND_L32",
+   "s": 2.5,
+   "changed": true
+  },
+  "80": {
+   "acc": 76.52666666666666,
+   "cfg": "AND_L32",
+   "s": 2.5,
+   "changed": true
+  },
+  "160": {
+   "acc": 76.76,
+   "cfg": "AND_L32",
+   "s": 2.5,
+   "changed": true
+  }
+ },
+ "imdb": {
+  "5": {
+   "acc": 81.50266666666666,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "10": {
+   "acc": 83.73200000000001,
+   "cfg": "AND",
+   "s": 1.5,
+   "changed": true
+  },
+  "20": {
+   "acc": 85.77733333333333,
+   "cfg": "AND",
+   "s": 1.5,
+   "changed": true
+  },
+  "40": {
+   "acc": null,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "80": null,
+  "160": null
+ },
+ "r8_V5000": {
+  "5": {
+   "acc": 88.12868146805617,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "10": {
+   "acc": 89.72964808941246,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "20": {
+   "acc": 92.73523636912853,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "40": {
+   "acc": null,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "80": {
+   "acc": null,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "160": {
+   "acc": null,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  }
+ },
+ "r52_V1000": {
+  "5": {
+   "acc": 77.51394835863502,
+   "cfg": "AND",
+   "s": 1.5,
+   "changed": true
+  },
+  "10": {
+   "acc": 79.61593356688725,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "20": {
+   "acc": 82.61320877124692,
+   "cfg": "AND",
+   "s": 1.5,
+   "changed": true
+  },
+  "40": {
+   "acc": 83.0543661606332,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "80": {
+   "acc": 83.9756065914104,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "160": {
+   "acc": 84.29998702478267,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  }
+ },
+ "r52_V5000": {
+  "5": {
+   "acc": 75.08758271701052,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "10": {
+   "acc": 76.08667445179707,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "20": {
+   "acc": 80.32957052030622,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "40": {
+   "acc": 80.71882704035292,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "80": {
+   "acc": 82.00337355650707,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "160": {
+   "acc": null,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  }
+ },
+ "r52_V0": {
+  "5": {
+   "acc": 70.61113273647334,
+   "cfg": "AND_L32",
+   "s": 5.0,
+   "changed": true
+  },
+  "10": {
+   "acc": 78.40923835474244,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "20": {
+   "acc": 80.40742182431556,
+   "cfg": "AND_L32",
+   "s": 1.5,
+   "changed": true
+  },
+  "40": {
+   "acc": 80.73180225768783,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "80": {
+   "acc": 80.78370312702738,
+   "cfg": "AND_L32",
+   "s": 2.5,
+   "changed": true
+  },
+  "160": {
+   "acc": 81.419488776437,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  }
+ }
+}
