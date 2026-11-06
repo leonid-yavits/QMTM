@@ -23,4 +23,4 @@ for s in ("top", "right"):
     ax.spines[s].set_visible(False)
 lax.axis("off")
 lax.legend(handles=h, loc="center", ncol=1, frameon=False, fontsize=7, handletextpad=0.3, borderaxespad=0)
-fig.savefig("/home/claude/qmtm/paper2/figures/fig_density.pdf", bbox_inches="tight"); fig.savefig("/home/claude/qmtm/paper2/figures/fig_density.png", dpi=200, bbox_inches="tight")
+fig.savefig("/home/claude/qmtm/paper2/figures/fig_density.pdf", bbox_inches="tight", metadata={"CreationDate": None}); fig.savefig("/home/claude/qmtm/paper2/figures/fig_density.png", dpi=200, bbox_inches="tight")

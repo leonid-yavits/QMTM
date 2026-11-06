@@ -133,13 +133,23 @@
    "changed": true
   },
   "40": {
-   "acc": null,
+   "acc": 87.74266666666665,
    "cfg": "AND_L64",
    "s": 1.5,
    "changed": true
   },
-  "80": null,
-  "160": null
+  "80": {
+   "acc": 88.016,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  },
+  "160": {
+   "acc": 88.22933333333333,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "changed": true
+  }
  },
  "r8_V5000": {
   "5": {
@@ -161,19 +171,19 @@
    "changed": true
   },
   "40": {
-   "acc": null,
+   "acc": 94.06434073402808,
    "cfg": "AND_L64",
    "s": 1.5,
    "changed": true
   },
   "80": {
-   "acc": null,
+   "acc": 94.50234103609728,
    "cfg": "AND_L32",
    "s": 1.5,
    "changed": true
   },
   "160": {
-   "acc": null,
+   "acc": 94.48723757740521,
    "cfg": "AND_L32",
    "s": 1.5,
    "changed": true
@@ -249,7 +259,7 @@
    "changed": true
   },
   "160": {
-   "acc": null,
+   "acc": 82.61320877124692,
    "cfg": "AND_L64",
    "s": 1.5,
    "changed": true

@@ -16,6 +16,12 @@ cd /home/claude/qmtm/study1 && python3 train.py fmnist 160 80 2.5 AND_L32 103 40
 cd /home/claude/qmtm/study1 && python3 train.py imdb 40 20 1.5 AND_L64 101 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
 cd /home/claude/qmtm/study1 && python3 train.py imdb 40 20 1.5 AND_L64 102 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
 cd /home/claude/qmtm/study1 && python3 train.py imdb 40 20 1.5 AND_L64 103 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
+cd /home/claude/qmtm/study1 && python3 train.py imdb 80 40 1.5 AND_L64 101 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
+cd /home/claude/qmtm/study1 && python3 train.py imdb 80 40 1.5 AND_L64 102 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
+cd /home/claude/qmtm/study1 && python3 train.py imdb 80 40 1.5 AND_L64 103 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
+cd /home/claude/qmtm/study1 && python3 train.py imdb 160 80 1.5 AND_L64 101 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
+cd /home/claude/qmtm/study1 && python3 train.py imdb 160 80 1.5 AND_L64 102 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
+cd /home/claude/qmtm/study1 && python3 train.py imdb 160 80 1.5 AND_L64 103 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
 cd /home/claude/qmtm/study1 && python3 train.py r52_V0 40 20 1.5 AND_L64 101 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
 cd /home/claude/qmtm/study1 && python3 train.py r52_V0 40 20 1.5 AND_L64 102 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl
 cd /home/claude/qmtm/study1 && python3 train.py r52_V0 40 20 1.5 AND_L64 103 40 /home/claude/qmtm/study4/logs/confirmD2.jsonl

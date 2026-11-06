@@ -741,6 +741,28 @@
    "changed": true,
    "conf_log": "/home/claude/qmtm/study4/logs/confirmD2.jsonl"
   },
+  "imdb|80": {
+   "T": 40,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "val": 0.878,
+   "orig_cfg": "AND_L64",
+   "orig_s": 2.5,
+   "orig_val": 0.8716,
+   "changed": true,
+   "conf_log": "/home/claude/qmtm/study4/logs/confirmD2.jsonl"
+  },
+  "imdb|160": {
+   "T": 80,
+   "cfg": "AND_L64",
+   "s": 1.5,
+   "val": 0.8824,
+   "orig_cfg": "AND_L64",
+   "orig_s": 2.5,
+   "orig_val": 0.8704,
+   "changed": true,
+   "conf_log": "/home/claude/qmtm/study4/logs/confirmD2.jsonl"
+  },
   "mnist|40": {
    "T": 20,
    "cfg": "AND_L64",
