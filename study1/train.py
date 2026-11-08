@@ -17,11 +17,11 @@ import numpy as np
 sys.path.insert(0, "/home/claude/qmtm")
 import qmtm
 from sklearn.model_selection import train_test_split
-m = re.fullmatch(r"AND(?:_L(\d+))?(?:_fb(\d+))?|(?:QM|QP)(\d+)_L(\d+)_fb(\d+)", cfg)
+m = re.fullmatch(r"AND(?:_L(\d+))?(?:_fb(\d+))?|(?:QM|QP)(\d+)(?:_L(\d+))?_fb(\d+)", cfg)   # study 5: QM/QP may omit _L (no budget)
 if cfg.startswith("AND"):
     mode, th, L, fb = 0, 1000, (int(m.group(1)) if m.group(1) else None), (int(m.group(2)) if m.group(2) else 0)
 else:
-    mode, th, L, fb = (3 if cfg.startswith("QP") else 1), 10 * int(m.group(3)), int(m.group(4)), int(m.group(5))
+    mode, th, L, fb = (3 if cfg.startswith("QP") else 1), 10 * int(m.group(3)), (int(m.group(4)) if m.group(4) else None), int(m.group(5))
 P = {"mnist": "/home/claude/data/proc/mnist.npz", "fmnist": "/home/claude/data/proc/fmnist.npz", "adult": "/home/claude/data/proc/adult.npz",
      "imdb": "/home/claude/data/proc/imdb.npz"}.get(DS, f"/home/claude/data/study1/{DS}.npz")
 if not os.path.exists(P):                    # study-2 datasets (PROTOCOL.md of study 2, part C)
@@ -52,4 +52,4 @@ comp = dict(inc_per_clause=float(len(lit_) / (K * C)), pos_per_clause=float((lit
 with open(out, "a") as f:
     f.write(json.dumps(dict(ds=DS, C=C, T=T, s=s, cfg=cfg, arm={0: "AND", 1: "QM", 3: "QP"}[mode], seed=sd, epochs=EP, val=curve[-1], val_curve=curve,
                             test=float(np.mean(pt == Yt)), pred=pt.astype(int).tolist() if os.environ.get("MT_PRED") else None,
-                            comp=comp, t=round(time.time() - t0, 1))) + "\n")
+                            comp=comp, t=round(time.time() - t0, 1), **({} if os.environ.get("QMTM_FAST", "1") == "1" else {"core": "orig"}))) + "\n")
