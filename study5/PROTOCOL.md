@@ -66,3 +66,5 @@ Disclosure: study 5 was designed after all study-1, 2 and 4 results were known, 
 It is reported as an added control, not as part of the original protocols. Study 4 is not changed.
 
 ## Amendments
+A1 (8 Nov 2026, 12:40, before any E3 run; E1 tuning in progress, no E1 result inspected). E3 is withdrawn at the
+authors' decision: the authors address the feedback mask themselves. E3a and E3b are not run.
