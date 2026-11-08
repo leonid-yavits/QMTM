@@ -16,6 +16,13 @@ Additions (our design, Section 5 of the paper):
     here by 2c) + 1 tagged write -> t_max (2c+2) cycles per class update.
   * Inference with QM: one threshold compare-tm (HD-CAM tunable Hamming threshold, Garzon et al. JSSC 2025) instead of an exact
     compare-tm: cycle count unchanged; t_max extra compared cells per row.
+  * Polarity-aware QM (QP, study-5 revision): negated literals strict, tolerance on included positive literals,
+    tau+_j = min(floor((1-theta) n_pos,j), t_max), exact for n_pos,j <= 6 at theta = 0.01 and 0.10. Inference: exact compare-tm with the
+    positive-literal columns driven true (only negated literals can discharge) -> flag F1 (1 write); threshold compare-tm with the
+    negated-literal columns driven true, on the same t_max bias cells -> flag F2 (1 write); exact compare on F1 = F2 = 1:
+    3 compares + 2 writes instead of 1 compare = +4 cycles per clause evaluation. Training: an n_pos counter (c' = 3 bits),
+    incremented in the same recount for the n positive literals (2c'+1 cmp + 2c'+2 wr each, reusing the include tag and inc_en),
+    and the bias refresh from n_pos: t_max (2c'+2). Row: + c' counter bits + 2 flag bits (bias cells shared with QM).
   * R1: one extra compared bit (the literal's input value) in the Type Ib decrement-enable compare: 0 cycles.
 Energy: first-order estimate = operation-count ratio (compares and writes on the 64-cell control subarray versus the same
 operations on the literal subarray are taken as equal cost); reported only as a ratio to the base."""
@@ -40,12 +47,19 @@ def overhead(M, L, theta=None):
     return dict(c=c, tmax=tmax, recount=recount, bias=bias, extra_cols=c + tmax)
 
 
+def qp_overhead(M, L, theta):
+    c = math.ceil(math.log2(L + 2))                      # n_inc counter for the literal budget
+    cp = math.ceil(math.log2(math.ceil(TMAX / (1 - theta)) + 1))   # n_pos counter resolves the clamp point
+    recount = 1 + (4 * c + 5) * M + 3 + 2 * M + (4 * cp + 3) * (M // 2)
+    return dict(c=c, cp=cp, recount=recount, bias=TMAX * (2 * cp + 2), extra_cols=c + cp + TMAX + 2, infer=4)
+
+
 def row_bits(M, K):
     return M * (N + 1) + 51 + math.ceil(math.log2(max(K, 2)))
 
 
 if __name__ == "__main__":
-    D = json.load(open("/home/claude/qmtm/paper2/data/datasets.json"))
+    D = json.load(open("/home/claude/qmtm/paper/data/datasets.json"))
     out = {}
     for ds, d in D.items():
         M, K = 2 * d["features"], d["K"]
@@ -57,8 +71,18 @@ if __name__ == "__main__":
                 b = base_cycles(M, s); x = o["recount"] + o["bias"]
                 r[f"{cfg}_s{s}"] = dict(base_cycles=b, extra_cycles=x, train_overhead_pct=100 * x / b, extra_cols=o["extra_cols"],
                                        area_overhead_pct=100 * o["extra_cols"] / W, tmax=o["tmax"], c=o["c"])
+        for cfg, L, th in [("QP1_L64", 64, 0.01), ("QP10_L64", 64, 0.10)]:
+            o = qp_overhead(M, L, th)
+            for s in (2.5, 10.0):
+                b = base_cycles(M, s); x = o["recount"] + o["bias"]
+                r[f"{cfg}_s{s}"] = dict(base_cycles=b, extra_cycles=x, train_overhead_pct=100 * x / b, extra_cols=o["extra_cols"],
+                                       area_overhead_pct=100 * o["extra_cols"] / W, tmax=TMAX, c=o["c"], cp=o["cp"], infer_cycles=o["infer"],
+                                       over_L64_pct=100 * (x - overhead(M, L)["recount"]) / b)
         out[ds] = r
     json.dump(out, open("/home/claude/qmtm/hw/qmtm_hw.json", "w"), indent=1)
+    q = [out[d][k] for d in out for k in out[d] if k.startswith("QP")]
+    print("QP: train +%.1f to +%.1f %%, over L64 +%.1f to +%.1f pp, row +%.4f to +%.3f %%" % (min(x["train_overhead_pct"] for x in q), max(x["train_overhead_pct"] for x in q),
+          min(x["over_L64_pct"] for x in q), max(x["over_L64_pct"] for x in q), min(x["area_overhead_pct"] for x in q), max(x["area_overhead_pct"] for x in q)))
     for ds in ["mnist", "imdb", "r52_V0", "news20_V20000", "dorothea_V0"]:
         r = out[ds]
         print(f"{ds:15s} M={r['M']:6d} W={r['row_bits']:7d}  " + "  ".join(
