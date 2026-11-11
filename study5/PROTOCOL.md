@@ -68,3 +68,7 @@ It is reported as an added control, not as part of the original protocols. Study
 ## Amendments
 A1 (8 Nov 2026, 12:40, before any E3 run; E1 tuning in progress, no E1 result inspected). E3 is withdrawn at the
 authors' decision: the authors address the feedback mask themselves. E3a and E3b are not run.
+A2 (11 Nov 2026, 19:15, before any E1b run and before any E1 selection or test run). The IMDb source
+(storage.googleapis.com) is not reachable from the compute environment. The IMDb cells are run only if the data become
+available; otherwise they are reported as missing in E1, E2 and E1b. In E1b, the original sweep setting has no seed-1
+validation run, so it is tuned with seed 1 together with the s = 1.5 candidates (as in study 4, D2).
