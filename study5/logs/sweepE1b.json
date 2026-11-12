@@ -2,7 +2,7 @@
  "adult": {
   "40": {
    "TMR": {
-    "acc": null,
+    "acc": 84.28703040229296,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
@@ -16,7 +16,7 @@
   },
   "80": {
    "TMR": {
-    "acc": null,
+    "acc": 84.36892210052206,
     "cfg": "AND_L32_fb1",
     "s": 1.5,
     "changed": true
@@ -30,7 +30,7 @@
   },
   "160": {
    "TMR": {
-    "acc": null,
+    "acc": 84.10618623537039,
     "cfg": "AND_L32_fb1",
     "s": 1.5,
     "changed": true
@@ -90,7 +90,7 @@
  "fmnist": {
   "40": {
    "TMR": {
-    "acc": null,
+    "acc": 70.10333333333334,
     "cfg": "AND_L32_fb1",
     "s": 1.5,
     "changed": true
@@ -148,7 +148,7 @@
   },
   "80": {
    "TMR": {
-    "acc": null,
+    "acc": 94.66847908170972,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
@@ -162,13 +162,13 @@
   },
   "160": {
    "TMR": {
-    "acc": null,
+    "acc": 94.50234103609728,
     "cfg": "AND_L32_fb1",
     "s": 1.5,
     "changed": true
    },
    "QM": {
-    "acc": null,
+    "acc": 93.79247847757136,
     "cfg": "QM95_L32_fb0",
     "s": 1.5,
     "changed": true
@@ -178,13 +178,13 @@
  "r52_V1000": {
   "40": {
    "TMR": {
-    "acc": null,
+    "acc": 87.20643570779811,
     "cfg": "AND_L32_fb1",
     "s": 1.5,
     "changed": true
    },
    "QM": {
-    "acc": null,
+    "acc": 80.39444660698065,
     "cfg": "QM95_L32_fb0",
     "s": 1.5,
     "changed": true
@@ -192,13 +192,13 @@
   },
   "80": {
    "TMR": {
-    "acc": null,
+    "acc": 87.21941092513299,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
    },
    "QM": {
-    "acc": null,
+    "acc": 81.19891008174388,
     "cfg": "QM95_L32_fb0",
     "s": 1.5,
     "changed": true
@@ -206,13 +206,13 @@
   },
   "160": {
    "TMR": {
-    "acc": null,
+    "acc": 88.25742831192423,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
    },
    "QM": {
-    "acc": null,
+    "acc": 81.03023225639029,
     "cfg": "QM95_L32_fb0",
     "s": 1.5,
     "changed": true
@@ -222,7 +222,7 @@
  "r52_V5000": {
   "40": {
    "TMR": {
-    "acc": null,
+    "acc": 88.33527961593357,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
@@ -236,13 +236,13 @@
   },
   "80": {
    "TMR": {
-    "acc": null,
+    "acc": 88.36123005060334,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
    },
    "QM": {
-    "acc": null,
+    "acc": 79.46023095886856,
     "cfg": "QM95_L32_fb0",
     "s": 1.5,
     "changed": true
@@ -250,13 +250,13 @@
   },
   "160": {
    "TMR": {
-    "acc": null,
+    "acc": 88.94511483067343,
     "cfg": "AND_L32_fb1",
     "s": 1.5,
     "changed": true
    },
    "QM": {
-    "acc": null,
+    "acc": 80.30362008563644,
     "cfg": "QM95_L32_fb0",
     "s": 1.5,
     "changed": true
@@ -266,7 +266,7 @@
  "r52_V0": {
   "40": {
    "TMR": {
-    "acc": null,
+    "acc": 87.43998961982612,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
@@ -280,7 +280,7 @@
   },
   "80": {
    "TMR": {
-    "acc": null,
+    "acc": 88.51693265862203,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
@@ -294,7 +294,7 @@
   },
   "160": {
    "TMR": {
-    "acc": null,
+    "acc": 88.4520565719476,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
