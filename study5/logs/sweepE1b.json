@@ -1,0 +1,310 @@
+{
+ "adult": {
+  "40": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": 84.15054423857781,
+    "cfg": "QM95_L64_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  },
+  "80": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": 84.11301054355614,
+    "cfg": "QM95_L64_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  },
+  "160": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": 83.47152557409493,
+    "cfg": "QM95_L64_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  }
+ },
+ "mnist": {
+  "40": {
+   "TMR": {
+    "acc": 86.08999999999999,
+    "cfg": "AND_L64_fb1",
+    "s": 5.0,
+    "changed": false
+   },
+   "QM": {
+    "acc": 90.70333333333333,
+    "cfg": "QM95_L32_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  },
+  "80": {
+   "TMR": {
+    "acc": 87.44666666666667,
+    "cfg": "AND_L64_fb1",
+    "s": 5.0,
+    "changed": false
+   },
+   "QM": {
+    "acc": 91.07,
+    "cfg": "QM95_L32_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  },
+  "160": {
+   "TMR": {
+    "acc": 87.43666666666667,
+    "cfg": "AND_L64_fb1",
+    "s": 5.0,
+    "changed": false
+   },
+   "QM": {
+    "acc": 91.38666666666667,
+    "cfg": "QM95_L32_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  }
+ },
+ "fmnist": {
+  "40": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": 79.13666666666667,
+    "cfg": "QM90_L32_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  },
+  "80": {
+   "TMR": {
+    "acc": 71.79333333333334,
+    "cfg": "AND_L32_fb1",
+    "s": 2.5,
+    "changed": false
+   },
+   "QM": {
+    "acc": 79.68666666666667,
+    "cfg": "QM90_L32_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  },
+  "160": {
+   "TMR": {
+    "acc": 72.27,
+    "cfg": "AND_L32_fb1",
+    "s": 2.5,
+    "changed": false
+   },
+   "QM": {
+    "acc": 79.85666666666667,
+    "cfg": "QM90_L32_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  }
+ },
+ "r8_V5000": {
+  "40": {
+   "TMR": {
+    "acc": 93.91330614710768,
+    "cfg": "AND_L32_fb1",
+    "s": 2.5,
+    "changed": false
+   },
+   "QM": {
+    "acc": 93.21854704727383,
+    "cfg": "QM95_L32_fb0",
+    "s": 2.5,
+    "changed": false
+   }
+  },
+  "80": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": 93.21854704727383,
+    "cfg": "QM95_L32_fb0",
+    "s": 2.5,
+    "changed": false
+   }
+  },
+  "160": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": null,
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "changed": true
+   }
+  }
+ },
+ "r52_V1000": {
+  "40": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": null,
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "changed": true
+   }
+  },
+  "80": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": null,
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "changed": true
+   }
+  },
+  "160": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": null,
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "changed": true
+   }
+  }
+ },
+ "r52_V5000": {
+  "40": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": 78.78551965745426,
+    "cfg": "QM95_L32_fb0",
+    "s": 10.0,
+    "changed": false
+   }
+  },
+  "80": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": null,
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "changed": true
+   }
+  },
+  "160": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": null,
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "changed": true
+   }
+  }
+ },
+ "r52_V0": {
+  "40": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": 78.08485792137019,
+    "cfg": "QM95_L32_fb0",
+    "s": 5.0,
+    "changed": false
+   }
+  },
+  "80": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": 78.22758531205399,
+    "cfg": "QM95_L32_fb0",
+    "s": 5.0,
+    "changed": false
+   }
+  },
+  "160": {
+   "TMR": {
+    "acc": null,
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "changed": true
+   },
+   "QM": {
+    "acc": 78.8503957441287,
+    "cfg": "QM95_L32_fb0",
+    "s": 5.0,
+    "changed": false
+   }
+  }
+ }
+}
