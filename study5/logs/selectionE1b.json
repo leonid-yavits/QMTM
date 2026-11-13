@@ -161,6 +161,60 @@
   "orig_val": 0.8068,
   "changed": false
  },
+ "imdb|40|TMR": {
+  "cfg": "AND_L64_fb1",
+  "s": 1.5,
+  "val": 0.8824,
+  "orig_cfg": "AND_L64_fb1",
+  "orig_s": 2.5,
+  "orig_val": 0.872,
+  "changed": true
+ },
+ "imdb|40|QM": {
+  "cfg": "QM95_L32_fb0",
+  "s": 1.5,
+  "val": 0.8556,
+  "orig_cfg": "QM95_L64_fb0",
+  "orig_s": 2.5,
+  "orig_val": 0.8084,
+  "changed": true
+ },
+ "imdb|80|TMR": {
+  "cfg": "AND_L64_fb1",
+  "s": 1.5,
+  "val": 0.8896,
+  "orig_cfg": "AND_L64_fb1",
+  "orig_s": 2.5,
+  "orig_val": 0.8872,
+  "changed": true
+ },
+ "imdb|80|QM": {
+  "cfg": "QM95_L64_fb0",
+  "s": 1.5,
+  "val": 0.8656,
+  "orig_cfg": "QM95_L64_fb0",
+  "orig_s": 2.5,
+  "orig_val": 0.8548,
+  "changed": true
+ },
+ "imdb|160|TMR": {
+  "cfg": "AND_L64_fb1",
+  "s": 1.5,
+  "val": 0.8968,
+  "orig_cfg": "AND_L64_fb1",
+  "orig_s": 2.5,
+  "orig_val": 0.8872,
+  "changed": true
+ },
+ "imdb|160|QM": {
+  "cfg": "QM95_L64_fb0",
+  "s": 1.5,
+  "val": 0.8652,
+  "orig_cfg": "QM95_L64_fb0",
+  "orig_s": 2.5,
+  "orig_val": 0.8476,
+  "changed": true
+ },
  "r8_V5000|40|TMR": {
   "cfg": "AND_L32_fb1",
   "s": 2.5,
