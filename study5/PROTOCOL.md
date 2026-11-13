@@ -72,3 +72,8 @@ A2 (11 Nov 2026, 19:15, before any E1b run and before any E1 selection or test r
 (storage.googleapis.com) is not reachable from the compute environment. The IMDb cells are run only if the data become
 available; otherwise they are reported as missing in E1, E2 and E1b. In E1b, the original sweep setting has no seed-1
 validation run, so it is tuned with seed 1 together with the s = 1.5 candidates (as in study 4, D2).
+A3 (13 Nov 2026, 16:05, after all non-IMDb results were known). The IMDb source is reachable again. IMDb was re-encoded
+with prep_imdb.py; one study-1 run (IMDb, C = 5, AND, s = 2.5, seed 101) reproduces the logged validation and test
+accuracy exactly. The IMDb cells of E1, E2 and E1b are run as fixed in A2 (run_imdb5.sh), with the same settings,
+selection rules and statistics. Holm families then cover 48 study-1 cells. The 45-cell results are kept in
+logs/*_noimdb.json.
