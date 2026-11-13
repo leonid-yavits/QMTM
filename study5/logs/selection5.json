@@ -396,6 +396,105 @@
     "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
    }
   },
+  "imdb|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.8296,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8164,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.7992,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 5.0,
+    "orig_val": 0.7244,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 2.5,
+    "val": 0.8016,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8016,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "imdb|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 2.5,
+    "val": 0.856,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.856,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 1.5,
+    "val": 0.8376,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.7924,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.8268,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.7972,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "imdb|20": {
+   "T": 10,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.8768,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8644,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 1.5,
+    "val": 0.8536,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.8324,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 2.5,
+    "val": 0.842,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.842,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
   "ledgar_V5000|5": {
    "T": 3,
    "TMR": {
