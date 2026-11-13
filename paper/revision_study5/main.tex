@@ -72,7 +72,7 @@ Against the vanilla TM as first tuned, R1 wins \numRwin{} of 48 cells, all on sp
 \del{Out of sample, the density rule is not confirmed (\ctlruleextallW{} wins, \ctlruleextallL{} losses).}
 \del{The baseline tuning grid matters more than either modification.}
 \add{Controls then lowered the specificity and literal budget of the vanilla TM and the specificity of R1 and QM.
-With all arms re-tuned, R1 wins \ctlRbothsparseW{} sparse cells by 3.4 to 17.2 percentage points (pp) and loses \ctlRbothdenseL{} dense cells.
+With all arms re-tuned, R1 wins \ctlRbothsparseW{} sparse cells by 1.5 to 17.2 percentage points (pp) and loses \ctlRbothdenseL{} dense cells.
 QM wins \ctlQbothallW{} cells by 1.2 to 10.9~pp and loses \ctlQbothallL{}.
 Out of sample, the density rule is not confirmed (\ctlrulebothallW{} wins, \ctlrulebothallL{} losses).
 Neither R1 nor QM works without the literal budget.
@@ -417,7 +417,7 @@ Only the vanilla TM is strengthened: the modified arms keep their original grid,
 \add{The symmetric control then adds $s = 1.5$ to the grid of TMR, QM and QMR in each cell.
 These arms are re-selected with the same rule, reusing their original runs, and confirmed with seeds 101 to 105 where the selection changes.
 QP and QPR are not re-tuned.
-The symmetric control covers the 45 Study~1 cells without IMDb and the 12 Study~2 cells.}
+The symmetric control covers the 48 Study~1 and the 12 Study~2 cells.}
 \add{The literal-budget ablation removes $L$ from the TMR and QM settings selected in the symmetric control, keeps $s$ and $T$, and runs seeds 101 to 103.
 An arm counts as working without the budget only if it has no significant loss against the budgeted arm, its median difference exceeds $-1$~pp, and it is within 1~pp in at least three quarters of the cells.
 This criterion was fixed before the runs.}
@@ -429,7 +429,7 @@ In the budget sweep, the vanilla TM is re-tuned at each budget from 40 to 160 cl
 \subsection{Statistics}
 The unit of analysis is the seed. Accuracy differences are given in percentage points (pp).
 Each contrast compares the five test accuracies of two arms with Welch's $t$-test~\cite{welch1947}.
-Holm's procedure~\cite{holm1979} controls the family-wise error at 0.05 within each contrast over the 48 cells \add{ (45 in the symmetric control and the ablation)}.
+Holm's procedure~\cite{holm1979} controls the family-wise error at 0.05 within each contrast over the 48 cells.
 The protocol fixed six contrasts: TMR$-$TM, QM$-$TM, QP$-$TM, QMR$-$TMR, QPR$-$TMR, and best QM-family arm minus best non-QM arm.
 The split of cells at \SI{3}{\percent} density was chosen after Study~1. Any threshold between 2.1 and \SI{13.5}{\percent} separates the Study~1 encodings identically.
 The relation of gain to input density and to the number of active features per sample is descriptive (Spearman correlation over cells, which are not independent within a dataset).
@@ -542,7 +542,7 @@ Because $s = 1.5$ is the smallest value tried, the vanilla TM may not be fully t
 
 \begin{table*}[!htbp]
 \centering
-\caption{Contrasts against the original vanilla TM and against the extended vanilla family TM$_{\mathrm{ext}}$ (test accuracy, five seeds, Welch, Holm within each contrast and baseline). W/L: significant wins and losses. Med.: median gain in pp. Sparse: training density below \SI{3}{\percent}. \del{Only the vanilla TM is re-tuned.} \add{Original: neither arm re-tuned. Extended: only the vanilla TM re-tuned. Both re-tuned: $s = 1.5$ also offered to TMR, QM and QMR, 45 Study~1 cells without IMDb. QP and QPR are not re-tuned.} ``Best other'' is the better of TMR and the vanilla TM on validation. The Study~2 TMR and QM rows are descriptive additions to the control protocol.}
+\caption{Contrasts against the original vanilla TM and against the extended vanilla family TM$_{\mathrm{ext}}$ (test accuracy, five seeds, Welch, Holm within each contrast and baseline). W/L: significant wins and losses. Med.: median gain in pp. Sparse: training density below \SI{3}{\percent}. \del{Only the vanilla TM is re-tuned.} \add{Original: neither arm re-tuned. Extended: only the vanilla TM re-tuned. Both re-tuned: $s = 1.5$ also offered to TMR, QM and QMR. QP and QPR are not re-tuned.} ``Best other'' is the better of TMR and the vanilla TM on validation. The Study~2 TMR and QM rows are descriptive additions to the control protocol.}
 \label{tab:controls}
 \vspace{3pt}
 \small
@@ -556,7 +556,7 @@ It still loses on dense cells, by up to 23.4~pp on UCI Phishing.
 In Study~2, R1 has no significant win against TM$_{\mathrm{ext}}$ and loses \ctlSRextallL{} cells, all with 10 clauses per class: AG News (4.3~pp), TREC-6 (15.4~pp), Letter (5.3~pp) and USPS (1.7~pp).
 Tuning the vanilla TM recovers most of the original R1 gain on these sets: on AG News the vanilla TM itself gains 28.3 and 27.4~pp from the extended grid.
 \add{With $s = 1.5$ offered to R1 as well, R1 wins \ctlRbothallW{} Study~1 cells against TM$_{\mathrm{ext}}$ and loses \ctlRbothallL{}.
-All wins are on sparse text, by 3.4 to 17.2~pp: Sector, RCV1, 20 Newsgroups, R52, R8 and LEDGAR.
+All wins are on sparse text, by 1.5 to 17.2~pp: Sector, RCV1, 20 Newsgroups, R52, R8, LEDGAR and IMDb (1.5~pp with 20 clauses per class).
 All losses are on dense cells: MNIST and Fashion-MNIST at all three budgets (4.2 to 7.7~pp) and UCI Phishing (18.1 and 19.4~pp).
 R1 selected $s = 1.5$ in \selFiveROneSlow{} of \selFiveROneN{} cells. Offering it raised the accuracy of R1 significantly in \ctlRselfSW{} cells and lowered it in none (median \ctlRselfSMed{}~pp).
 In Study~2, R1 with $s = 1.5$ wins on Emotion (+19.8 and +25.0~pp) and loses on Letter, AG News and USPS with 10 clauses (5.3, 2.2 and 1.7~pp).}
@@ -571,7 +571,7 @@ QP loses \ctlPextallL{} cells and wins none.
 It wins on Fashion-MNIST at all three budgets and on MNIST at 10 clauses (1.2 to 3.5~pp), and on Sector with 5,000 and 20,000 words (6.8 to 10.9~pp).
 It loses on Sector with 1,000 words (6.5~pp) and on R52 with 1,000 words and 20 clauses (3.6~pp).
 Offering $s = 1.5$ raised the accuracy of QM significantly in \ctlQselfSW{} cells, all but one on Sector and 20 Newsgroups, and lowered it in none.
-The best QM-family arm wins \ctlBbothallW{} cells, on MNIST and Fashion-MNIST, and loses \ctlBbothallL{}, on 20 Newsgroups with 1,000 words (5.7~pp) and Dorothea (1.1~pp).
+The best QM-family arm wins \ctlBbothallW{} cells, on MNIST and Fashion-MNIST, and loses \ctlBbothallL{}, on 20 Newsgroups with 1,000 words (5.7~pp).
 In Study~2, QM with $s = 1.5$ wins only on USPS with 10 clauses (1.0~pp). It loses \ctlSQbothallL{} cells: five on the three text sets (16.2 to 23.1~pp) and Letter with 10 clauses (2.8~pp).}
 
 \textbf{Density rule.} As a descriptive check outside the control protocol, the rule applied to Study~1, where it was derived, beats TM$_{\mathrm{ext}}$ in \ctlSoneRuleW{} cells and loses in \ctlSoneRuleL{}, with significance taken from the Holm-corrected TMR and QM contrasts.
@@ -598,7 +598,7 @@ Table~\ref{tab:noL} compares the test accuracy with and without $L$ on the same 
 
 \begin{table}[!htbp]
 \centering
-\add{\caption{Literal-budget ablation (test accuracy, seeds 101 to 103, Welch, Holm within each row). No budget $-$ budget: the same arm and setting without and with $L$. W/L: significant wins and losses. Med.: median difference in pp. Within 1~pp: cells with an absolute difference of at most 1~pp. Literals per clause: median over cells of the mean number of included literals per clause after training. Study~1: 45 cells without IMDb. Study~2: 12 cells.}
+\add{\caption{Literal-budget ablation (test accuracy, seeds 101 to 103, Welch, Holm within each row). No budget $-$ budget: the same arm and setting without and with $L$. W/L: significant wins and losses. Med.: median difference in pp. Within 1~pp: cells with an absolute difference of at most 1~pp. Literals per clause: median over cells of the mean number of included literals per clause after training. Study~1: 48 cells. Study~2: 12 cells.}
 \label{tab:noL}}
 \footnotesize
 \setlength{\tabcolsep}{5pt}
@@ -606,10 +606,10 @@ Table~\ref{tab:noL} compares the test accuracy with and without $L$ on the same 
 \end{table}
 
 \add{Neither arm works without the budget.
-Without $L$, R1 loses significantly in \noLROneL{} of \noLROneN{} Study~1 cells and \noLRTwoL{} of \noLRTwoN{} Study~2 cells, with median losses of 40.5 and 45.1~pp.
-QM loses in \noLQOneL{} and \noLQTwoL{} cells, with median losses of 31.7 and 7.4~pp.
+Without $L$, R1 loses significantly in \noLROneL{} of \noLROneN{} Study~1 cells and \noLRTwoL{} of \noLRTwoN{} Study~2 cells, with median losses of 37.8 and 45.1~pp.
+QM loses in \noLQOneL{} and \noLQTwoL{} cells, with median losses of 31.8 and 7.4~pp.
 Neither arm wins a cell.
-The median number of included literals per clause rises from 23 to 66 with the budget to 1,260 to 4,350 without it.
+The median number of included literals per clause rises from 23 to 66 with the budget to 1,260 to 3,790 without it.
 On UCI Phishing, where the clauses stay below the budget, removing $L$ changes the test accuracy by at most 0.14~pp.
 Against TM$_{\mathrm{ext}}$, R1 without $L$ loses \noLROneTmL{} Study~1 and \noLRTwoTmL{} Study~2 cells, and QM without $L$ loses \noLQOneTmL{} and \noLQTwoTmL{}.
 Both rules weaken the pressure that removes literals from a clause.
@@ -720,7 +720,7 @@ To our knowledge, they have not been used for TM clause evaluation.
 \section{Discussion and limitations}
 \label{sec:discussion}
 
-\textbf{What the evidence supports.} \hadd{With $s = 1.5$ offered to all arms, R1 gains 3.4 to 17.2~pp in \ctlRbothsparseW{} sparse cells and loses only on dense inputs. QM gains 1.2 to 3.5~pp on MNIST and Fashion-MNIST and 6.8 to 10.9~pp on Sector.}
+\textbf{What the evidence supports.} \hadd{With $s = 1.5$ offered to all arms, R1 gains \del{3.4}\add{1.5} to 17.2~pp in \ctlRbothsparseW{} sparse cells and loses only on dense inputs. QM gains 1.2 to 3.5~pp on MNIST and Fashion-MNIST and 6.8 to 10.9~pp on Sector.}
 Against the stronger baseline, with the modified arms not re-tuned, two effects remain.
 R1 gains 3.0 to 11.7~pp on sparse text with many classes: R52, R8, RCV1 and Sector.
 QM, alone or with R1, gains 1.2 to 5.5~pp on dense image and signal inputs: MNIST, Fashion-MNIST and UCI HAR. It also gains 1.0 to 1.7~pp on USPS in Study~2.
