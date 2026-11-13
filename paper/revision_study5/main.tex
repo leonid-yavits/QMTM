@@ -27,6 +27,11 @@
 \newcommand{\add}[1]{{\color{blue}#1}}
 \newcommand{\del}[1]{\textcolor{blue}{\sout{#1}}}
 \newcommand{\maskred}[1]{\textcolor{red}{#1}}
+\definecolor{harel}{RGB}{0,140,60}
+\newcommand{\hadd}[1]{{\color{harel}#1}}
+\newcommand{\hdel}[1]{\textcolor{harel}{\sout{#1}}}
+\newcommand{\hnote}[1]{\textcolor{harel}{[Harel: #1]}}
+
 \newcommand{\ninc}{n_{\mathrm{inc},j}}
 \input{numbers}
 \input{numbers_rule}
@@ -143,7 +148,7 @@ Type~II feedback is not limited, so $|I_j|$ can exceed $L$.
 
 \subsection{AP(TM)}
 AP(TM)~\cite{shrot2026aptm} stores the clauses of all classes in the rows of a CAM-based associative processor.
-Following the AP(TM) row layout, a row holds an $N$-bit TA state ($N = 8$) and an include bit for each of the $M$ literals, and $51 + \lceil \log_2 K \rceil$ control bits.
+Following the AP(TM) row layout, a row holds an $N$-bit TA\hdel{ state} ($N = 8$) and a\hdel{n include}\hadd{ temporary} bit for each of the $M$ literals, and $51 + \lceil \log_2 K \rceil$ control bits.
 In the \emph{compare-tm} operation, the input vector drives the search lines and only cells whose TA is in the include half can discharge the match line.
 The match line stays high only if every included literal is true, which implements Eq.~\eqref{eq:and} in all rows at once.
 Training runs in three phases per class update: stochastic row selection, \maskred{stochastic mask generation}, and feedback execution.
@@ -350,7 +355,7 @@ Addition & Inference & Training cycles & Row width \\
 R1 & \proj{0 cycles} & \proj{0 cycles} & \proj{0 bits} \\
 Literal budget ($c$-bit counter) & \proj{0 cycles} & \proj{+\numhwLmindc{} to +\numhwLmaxge{}\,\%} & \proj{+$c$ bits} \\
 QM threshold and bias cells & \proj{0 cycles} & \proj{$\le$ 80 cycles} & \proj{+5 bits} \\
-All\add{ but QP}, worst case & \proj{0 cycles} & \proj{+\numhwLmaxge{}\,\%} & \proj{$\le$ +\numhwareamax{}\,\%} \\
+All \add{ but QP}, worst case & \proj{0 cycles} & \proj{+\numhwLmaxge{}\,\%} & \proj{$\le$ +\numhwareamax{}\,\%} \\
 \add{QP with $L = 64$ (all its additions)} & \proj{+4 cycles} & \proj{+49.4 to +53.1\,\%} & \proj{$\le$ +1.33\,\%} \\
 \bottomrule
 \end{tabular}
@@ -378,7 +383,7 @@ Validation data are the official split if one exists, otherwise a stratified \SI
 The official Dorothea validation set serves as its test set, and the UCI Phishing test set is a stratified \SI{20}{\percent} split.
 The RCV1 test set is a random sample of 50,000 documents of the official test file.
 The six datasets marked $\dagger$ were added after study~1 to test the density rule (Section~\ref{sec:res-rule}): AG News~\cite{zhang2015agnews}, TREC-6~\cite{li2002trec}, Emotion~\cite{saravia2018emotion}, USPS~\cite{hull1994usps}, Letter~\cite{frey1991letter} and Satimage~\cite{michie1994statlog}.
-The three added text sets use the raw-text encoding above. TREC-6 keeps stop words, because its classes are defined by question words.
+The three added text sets use the raw-text encoding above. TREC-6 keeps stop words, because its classes are defined by question words. \hadd{Letter, USPS and Satimage come from the LIBSVM collection~\cite{chang2011libsvm} and use ten thresholds per feature at the training quantiles 5 to 95\,\%, as UCI HAR.}
 
 \begin{table*}[!htbp]
 \centering
@@ -419,11 +424,12 @@ This criterion was fixed before the runs.}
 The controls can only raise the validation accuracy of the baseline. On test data it fell in 7 of 60 cells, by at most 1.3~pp.
 In the budget sweep, the vanilla TM is re-tuned at each budget from 40 to 160 clauses per class over $\{L = 32, L = 64\} \times \{1.5, 2.5\}$ and its original setting, and confirmed with seeds 101 to 103.
 \add{In the symmetric control, TMR and QM are re-tuned in the same way at each budget from 40 to 160 clauses per class, over their original sweep setting and every member of their family at {$s = 1.5$}, with seed~1 on validation. A changed selection is confirmed with seeds 101 to 103. IMDb is not included.}
+\hnote{Why is IMDb excluded from the symmetric control and the re-tuned sweep?}
 
 \subsection{Statistics}
 The unit of analysis is the seed. Accuracy differences are given in percentage points (pp).
 Each contrast compares the five test accuracies of two arms with Welch's $t$-test~\cite{welch1947}.
-Holm's procedure~\cite{holm1979} controls the family-wise error at 0.05 within each contrast over the 48 cells\add{ (45 in the symmetric control and the ablation)}.
+Holm's procedure~\cite{holm1979} controls the family-wise error at 0.05 within each contrast over the 48 cells \add{ (45 in the symmetric control and the ablation)}.
 The protocol fixed six contrasts: TMR$-$TM, QM$-$TM, QP$-$TM, QMR$-$TMR, QPR$-$TMR, and best QM-family arm minus best non-QM arm.
 The split of cells at \SI{3}{\percent} density was chosen after Study~1. Any threshold between 2.1 and \SI{13.5}{\percent} separates the Study~1 encodings identically.
 The relation of gain to input density and to the number of active features per sample is descriptive (Spearman correlation over cells, which are not independent within a dataset).
@@ -714,15 +720,16 @@ To our knowledge, they have not been used for TM clause evaluation.
 \section{Discussion and limitations}
 \label{sec:discussion}
 
-\textbf{What the evidence supports.} Against the stronger baseline, with the modified arms not re-tuned, two effects remain.
+\textbf{What the evidence supports.} \hadd{With $s = 1.5$ offered to all arms, R1 gains 3.4 to 17.2~pp in \ctlRbothsparseW{} sparse cells and loses only on dense inputs. QM gains 1.2 to 3.5~pp on MNIST and Fashion-MNIST and 6.8 to 10.9~pp on Sector.}
+Against the stronger baseline, with the modified arms not re-tuned, two effects remain.
 R1 gains 3.0 to 11.7~pp on sparse text with many classes: R52, R8, RCV1 and Sector.
 QM, alone or with R1, gains 1.2 to 5.5~pp on dense image and signal inputs: MNIST, Fashion-MNIST and UCI HAR. It also gains 1.0 to 1.7~pp on USPS in Study~2.
-\add{With $s = 1.5$ offered to all arms, R1 gains 3.4 to 17.2~pp in \ctlRbothsparseW{} sparse cells and loses only on dense inputs. QM gains 1.2 to 3.5~pp on MNIST and Fashion-MNIST and 6.8 to 10.9~pp on Sector.}
+\hdel{With $s = 1.5$ offered to all arms, R1 gains 3.4 to 17.2~pp in \ctlRbothsparseW{} sparse cells and loses only on dense inputs. QM gains 1.2 to 3.5~pp on MNIST and Fashion-MNIST and 6.8 to 10.9~pp on Sector.}
 In the descriptive budget sweep, both effects persist to 160 clauses per class against the re-tuned TM on R52 and Fashion-MNIST, but not on R8 (Section~\ref{sec:res-budget}). \add{With TMR and QM also re-tuned at each budget, the R1 lead on R52 grows to 3.2 to 12.1~pp, and on R8 R1 stays within 0.2~pp of the re-tuned TM from 40 clauses on.}
 Neither effect follows input density reliably.
 The density rule fails on new datasets, R1 loses on short-text sets, and QM loses on Letter.
 Density alone therefore does not select the modification. Both should be validated against a well-tuned vanilla TM on the target data.
-R1 lost heavily on the one-hot UCI Phishing set, our only one-hot encoding, and QM should not be used on sparse text.
+R1 lost heavily on the one-hot UCI Phishing set, our only one-hot encoding, and QM should be used on sparse text only after validation.
 
 \textbf{Baseline tuning.} The largest single effect in this study is the tuning grid of the vanilla TM, in $s$ and $L$ together. We did not separate the two.
 Adding $s = 1.5$ and $L = 32$ changed the vanilla selection in 57 of 60 cells and removed most of the gains measured against the original baseline, by as much as 28~pp.
@@ -753,10 +760,11 @@ An incremental counter update could reduce it but was not evaluated.
 \section{Conclusion}
 \label{sec:conclusion}
 Relative qualified-majority clauses and targeted Type~Ib forgetting map onto an associative processor with an approximate-search CAM with \proj{no added inference cycles and at most 0.94\,\% wider rows}. Their training overhead comes from the literal budget.
+\hadd{With R1, QM and the vanilla TM all offered a smaller specificity, and the vanilla TM also a smaller literal budget, R1 wins \ctlRbothallW{} of \ctlRbothallN{} cells, all on sparse text, and loses \ctlRbothallL{}, all dense, and a density rule fixed in advance (R1 on sparse inputs, QM on dense ones) is not confirmed on six unseen datasets.}
 Against the vanilla TM as first tuned, R1 wins \numRwin{} of 48 cells and a density rule fixed in advance wins \numruleWin{} of \numruleN{} cells on six unseen datasets with no loss.
 Against a vanilla TM tuned over a smaller specificity value and literal budget, with the modified arms not re-tuned, most of the R1 gains and the density rule do not hold.
 R1 keeps gains of 3.0 to 11.7~pp on sparse many-class text, and QM, alone or with R1, keeps gains of 1.0 to 5.5~pp on dense image and signal data, but the density rule is not confirmed out of sample.
-\add{When R1 and QM are offered the same smaller specificity, R1 wins \ctlRbothallW{} of \ctlRbothallN{} cells against this baseline, all on sparse text, and loses \ctlRbothallL{}, all dense. The density rule is still not confirmed out of sample.
+\add{\hdel{When R1 and QM are offered the same smaller specificity, R1 wins \ctlRbothallW{} of \ctlRbothallN{} cells against this baseline, all on sparse text, and loses \ctlRbothallL{}, all dense. The density rule is still not confirmed out of sample.}
 Neither modification works without the literal budget, so its counter is a necessary part of their hardware cost.}
 At 5 clauses per class, the rule arm matches a re-tuned vanilla TM with 1 to 4 times as many clauses, against 2 to 16 times for the original one, again without re-tuning the rule arm. \add{With the rule arm also re-tuned, the ratio is 1 to 16 on six encodings, and on R52 with all words the re-tuned vanilla TM with 160 clauses per class does not reach R1 with 5.}
 For in-memory TM design, these results favor careful tuning of the vanilla baseline first, and per-dataset validation of either modification as a low-cost hardware option.
