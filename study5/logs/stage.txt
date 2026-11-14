@@ -164,3 +164,14 @@ IMDB_CONFIRM5DONE Sat Nov 14 01:59:32 IST 2026
 IMDB_E2DONE Sat Nov 14 01:59:32 IST 2026
 IMDB_TUNEE1BDONE Sat Nov 14 01:59:34 IST 2026
 selected 48 changed 27 confirm jobs 81
+IMDB_TUNE5DONE Sat Nov 14 03:59:46 IST 2026
+s1 TMR cells 48 changed 35 s=1.5 35
+s1 QM cells 48 changed 27 s=1.5 27
+s1 QMR cells 48 changed 28 s=1.5 28
+s2 TMR cells 12 changed 6 s=1.5 6
+s2 QM cells 12 changed 8 s=1.5 8
+confirm jobs 520 E2 jobs 360
+IMDB_CONFIRM5DONE Sat Nov 14 03:59:46 IST 2026
+IMDB_E2DONE Sat Nov 14 03:59:47 IST 2026
+IMDB_TUNEE1BDONE Sat Nov 14 03:59:48 IST 2026
+selected 48 changed 27 confirm jobs 81

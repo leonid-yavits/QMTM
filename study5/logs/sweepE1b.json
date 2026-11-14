@@ -148,13 +148,13 @@
   },
   "80": {
    "TMR": {
-    "acc": null,
+    "acc": 88.64133333333332,
     "cfg": "AND_L64_fb1",
     "s": 1.5,
     "changed": true
    },
    "QM": {
-    "acc": null,
+    "acc": 84.16666666666667,
     "cfg": "QM95_L64_fb0",
     "s": 1.5,
     "changed": true
