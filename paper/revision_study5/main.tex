@@ -423,7 +423,7 @@ An arm counts as working without the budget only if it has no significant loss a
 This criterion was fixed before the runs.}
 The controls can only raise the validation accuracy of the baseline. On test data it fell in 7 of 60 cells, by at most 1.3~pp.
 In the budget sweep, the vanilla TM is re-tuned at each budget from 40 to 160 clauses per class over $\{L = 32, L = 64\} \times \{1.5, 2.5\}$ and its original setting, and confirmed with seeds 101 to 103.
-\add{In the symmetric control, TMR and QM are re-tuned in the same way at each budget from 40 to 160 clauses per class, over their original sweep setting and every member of their family at {$s = 1.5$}, with seed~1 on validation. A changed selection is confirmed with seeds 101 to 103. IMDb is not included.}
+\add{In the symmetric control, TMR and QM are re-tuned in the same way at each budget from 40 to 160 clauses per class, over their original sweep setting and every member of their family at {$s = 1.5$}, with seed~1 on validation. A changed selection is confirmed with seeds 101 to 103.}
 \hnote{Why is IMDb excluded from the symmetric control and the re-tuned sweep?}
 
 \subsection{Statistics}
@@ -621,7 +621,7 @@ The literal budget therefore limits clause growth for both rules, and its counte
 \label{sec:res-budget}
 The budget sweep extends the eight encodings tested at $C = 5$, 10 and 20 to $C = 40$, 80 and 160.
 TMR and QM keep the configuration and $s$ selected at $C = 20$ in Study~1, with $T = C/2$, and run with seeds 101 to 103.
-\add{The sweep also has re-tuned TMR and QM. They use the selection of the symmetric control at $C \le 20$ (Section~\ref{sec:res-base}) and are re-tuned at each larger budget (Section~\ref{sec:protocol}). The selection changed in \sweepFiveChanged{} of \sweepFiveN{} arm and budget pairs, 15 for TMR and 6 for QM, and every changed selection uses $s = 1.5$.}
+\add{The sweep also has re-tuned TMR and QM. They use the selection of the symmetric control at $C \le 20$ (Section~\ref{sec:res-base}) and are re-tuned at each larger budget (Section~\ref{sec:protocol}). The selection changed in \sweepFiveChanged{} of \sweepFiveN{} arm and budget pairs, 18 for TMR and 9 for QM, and every changed selection uses $s = 1.5$.}
 The sweep has two vanilla baselines.
 The original TM keeps its $C = 20$ setting, as the modified arms do.
 The re-tuned TM uses TM$_{\mathrm{ext}}$ (Section~\ref{sec:res-base}) at $C \le 20$ and is re-tuned at each larger budget (Section~\ref{sec:protocol}).
@@ -632,13 +632,13 @@ Table~\ref{tab:budget} gives, for the arm chosen by the density rule at $C = 5$ 
 \begin{figure*}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/fig_sweep.pdf}
-\caption{Clause-budget sweep: mean test accuracy over seeds 101 to 103 against clauses per class $C$ (log scale). TMR, QM and the original TM: Study~1 settings at $C \le 20$, the $C = 20$ setting with $T = C/2$ at $C \ge 40$. Re-tuned TM: TM$_{\mathrm{ext}}$ at $C \le 20$, re-tuned per budget at $C \ge 40$. \add{Dashed TMR and QM: original settings. Solid TMR and QM: re-tuned, with the selection of the symmetric control at $C \le 20$ and re-tuned per budget at $C \ge 40$. IMDb has no re-tuned TMR or QM. Where the re-tuned selection equals the original one, the solid curve covers the dashed one.}}
+\caption{Clause-budget sweep: mean test accuracy over seeds 101 to 103 against clauses per class $C$ (log scale). TMR, QM and the original TM: Study~1 settings at $C \le 20$, the $C = 20$ setting with $T = C/2$ at $C \ge 40$. Re-tuned TM: TM$_{\mathrm{ext}}$ at $C \le 20$, re-tuned per budget at $C \ge 40$. \add{Dashed TMR and QM: original settings. Solid TMR and QM: re-tuned, with the selection of the symmetric control at $C \le 20$ and re-tuned per budget at $C \ge 40$. Where the re-tuned selection equals the original one, the solid curve covers the dashed one.}}
 \label{fig:sweep}
 \end{figure*}
 
 \begin{table}[!htbp]
 \centering
-\caption{Smallest vanilla clause budget per class (TM $C$ needed) whose mean test accuracy reaches that of the rule arm with 5 or 10 clauses per class. Orig.: original TM. Re-t.: re-tuned TM. Mean of seeds 101 to 103. $>$160: not reached in the sweep. \add{Second line (blue): the rule arm re-tuned in the symmetric control (Section~\ref{sec:res-base}). IMDb has no re-tuned rule arm.}}
+\caption{Smallest vanilla clause budget per class (TM $C$ needed) whose mean test accuracy reaches that of the rule arm with 5 or 10 clauses per class. Orig.: original TM. Re-t.: re-tuned TM. Mean of seeds 101 to 103. $>$160: not reached in the sweep. \add{Second line (blue): the rule arm re-tuned in the symmetric control (Section~\ref{sec:res-base}).}}
 \label{tab:budget}
 \footnotesize
 \setlength{\tabcolsep}{5pt}
@@ -653,10 +653,9 @@ With 10 clauses per class, the rule arm stays ahead of the re-tuned TM with 160 
 R1 leads by 1.9~pp on R52 with all words and by 0.4~pp on R52 with 5,000 words.
 QM leads by 0.9~pp on Fashion-MNIST.
 On the other five encodings the re-tuned TM catches up at 10 to 40 clauses.
-\add{With the rule arm also re-tuned (blue lines in Table~\ref{tab:budget}), the rule arm with 5 clauses per class matches a re-tuned vanilla TM with 1 to 16 times as many clauses on six encodings.
-On the seventh, R52 with all words, R1 with 5 clauses per class stays ahead of the re-tuned TM with 160 clauses, by 1.3~pp.
-With 10 clauses per class, the re-tuned rule arm stays ahead of the re-tuned TM with 160 clauses on four encodings: R52 with all words (3.8~pp), R52 with 5,000 words (2.8~pp), Fashion-MNIST (0.9~pp) and R52 with 1,000 words (0.2~pp).
-IMDb has no re-tuned rule arm.}
+\add{With the rule arm also re-tuned (blue lines in Table~\ref{tab:budget}), the rule arm with 5 clauses per class matches a re-tuned vanilla TM with 1 to 16 times as many clauses on seven encodings.
+On the eighth, R52 with all words, R1 with 5 clauses per class stays ahead of the re-tuned TM with 160 clauses, by 1.3~pp.
+With 10 clauses per class, the re-tuned rule arm stays ahead of the re-tuned TM with 160 clauses on four encodings: R52 with all words (3.8~pp), R52 with 5,000 words (2.8~pp), Fashion-MNIST (0.9~pp) and R52 with 1,000 words (0.2~pp).}
 
 Across budgets, the re-tuned TM changes the picture on several encodings.
 On the three R52 encodings, R1 stays ahead at every budget, by 2.4 to 7.8~pp.
@@ -671,18 +670,20 @@ QM is also less stable across budgets on sparse text, for example 85.3, 81.0 and
 \add{With TMR and QM also re-tuned, the comparison with the re-tuned TM changes as follows.
 On the three R52 encodings, R1 stays ahead at every budget, by 3.2 to 12.1~pp.
 On R8, R1 leads by 1.1 to 3.2~pp up to 20 clauses and differs from the re-tuned TM by at most 0.2~pp from 40 clauses on.
+On IMDb, R1 is ahead of the re-tuned TM at every budget, by 0.2 to 1.3~pp.
 On UCI Adult, the re-tuned TM stays ahead of QM at every budget, by 0.7 to 2.7~pp.
 On MNIST and Fashion-MNIST, re-tuning does not change the QM selection at any budget, so the QM results above hold.
 The family that the rule does not choose still loses at most budgets.
 R1 trails by 3.4 to 7.9~pp on MNIST and Fashion-MNIST.
-QM on R52 leads by 0.9 and 0.7~pp at 5 clauses with 5,000 and all words, and trails by 1.7 to 6.5~pp at every other budget.}
+QM on R52 leads by 0.9 and 0.7~pp at 5 clauses with 5,000 and all words, and trails by 1.7 to 6.5~pp at every other budget.
+On IMDb, QM trails the re-tuned TM at every budget, by 0.7 to 3.9~pp, and still drops at 80 clauses: 85.9, 84.2 and 86.8\,\% at 40, 80 and 160 clauses.}
 
 In AP(TM), area and the energy of each operation scale with the number of rows~\cite{shrot2026aptm}.
 An $F$-fold clause reduction at equal accuracy therefore gives \proj{an $F$-fold smaller clause array and $1/F$ of the search energy per inference}.
 Training latency per class update does not depend on the row count, so, relative to AP(TM) without a literal budget, it rises by \proj{36 to 44\,\%} whatever $F$ is.
 Against a vanilla TM that already uses a literal budget (Section~\ref{sec:hwcost}), R1 adds \proj{no training cycles} and QM \proj{at most 80 per class update}, so the training energy falls by \proj{nearly $F$}.
 Relative to AP(TM) without a budget, and if each added cycle costs as much energy as a base cycle, the training energy per class update falls by \proj{$F/1.437$ to $F/1.358$}: \proj{1.4 to 1.5 times} for $F = 2$ and \proj{2.8 to 2.9 times} for $F = 4$.
-Against the re-tuned TM, $F$ is 1 to 4 at 5 clauses per class (Table~\ref{tab:budget})\add{, and 1 to 16 on six encodings when the rule arm is also re-tuned}. The \proj{savings} are therefore smaller than against the original TM, and they \proj{vanish where $F = 1$}.
+Against the re-tuned TM, $F$ is 1 to 4 at 5 clauses per class (Table~\ref{tab:budget})\add{, and 1 to 16 on seven encodings when the rule arm is also re-tuned}. The \proj{savings} are therefore smaller than against the original TM, and they \proj{vanish where $F = 1$}.
 These are projections from the analytical model and the accuracy means above, not measurements.
 
 %% ---------------------------------------------------------------------------
@@ -766,7 +767,7 @@ Against a vanilla TM tuned over a smaller specificity value and literal budget, 
 R1 keeps gains of 3.0 to 11.7~pp on sparse many-class text, and QM, alone or with R1, keeps gains of 1.0 to 5.5~pp on dense image and signal data, but the density rule is not confirmed out of sample.
 \add{\hdel{When R1 and QM are offered the same smaller specificity, R1 wins \ctlRbothallW{} of \ctlRbothallN{} cells against this baseline, all on sparse text, and loses \ctlRbothallL{}, all dense. The density rule is still not confirmed out of sample.}
 Neither modification works without the literal budget, so its counter is a necessary part of their hardware cost.}
-At 5 clauses per class, the rule arm matches a re-tuned vanilla TM with 1 to 4 times as many clauses, against 2 to 16 times for the original one, again without re-tuning the rule arm. \add{With the rule arm also re-tuned, the ratio is 1 to 16 on six encodings, and on R52 with all words the re-tuned vanilla TM with 160 clauses per class does not reach R1 with 5.}
+At 5 clauses per class, the rule arm matches a re-tuned vanilla TM with 1 to 4 times as many clauses, against 2 to 16 times for the original one, again without re-tuning the rule arm. \add{With the rule arm also re-tuned, the ratio is 1 to 16 on seven encodings, and on R52 with all words the re-tuned vanilla TM with 160 clauses per class does not reach R1 with 5.}
 For in-memory TM design, these results favor careful tuning of the vanilla baseline first, and per-dataset validation of either modification as a low-cost hardware option.
 
 \section*{Data and code availability}
