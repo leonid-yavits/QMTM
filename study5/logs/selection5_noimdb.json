@@ -1,0 +1,1767 @@
+{
+ "s1": {
+  "adult|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 5.0,
+    "val": 0.8219,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.8219,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.8096,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.8081,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 2.5,
+    "val": 0.8071,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8071,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "adult|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.839,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8283,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.8288,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 5.0,
+    "orig_val": 0.828,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 2.5,
+    "val": 0.8178,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8178,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "adult|20": {
+   "T": 10,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.8437,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.837,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 10.0,
+    "val": 0.8393,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.8393,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 5.0,
+    "val": 0.837,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.837,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "dorothea_V0|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 2.5,
+    "val": 0.9333,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9333,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 2.5,
+    "val": 0.9417,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.9417,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 1.5,
+    "val": 0.9333,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9333,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "dorothea_V0|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 10.0,
+    "val": 0.9333,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 10.0,
+    "orig_val": 0.9333,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.9333,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.9333,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 1.5,
+    "val": 0.9417,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.925,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "dorothea_V5000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.925,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.925,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 1.5,
+    "val": 0.9333,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.9333,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 2.5,
+    "val": 0.9333,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9333,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "dorothea_V5000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 10.0,
+    "val": 0.9417,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 10.0,
+    "orig_val": 0.9417,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 1.5,
+    "val": 0.925,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.925,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 2.5,
+    "val": 0.9417,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9417,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "fmnist|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.6748,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.6588,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 10.0,
+    "val": 0.7522,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.7522,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 2.5,
+    "val": 0.7328,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7328,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "fmnist|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 2.5,
+    "val": 0.7013,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7013,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 10.0,
+    "val": 0.7842,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.7842,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 5.0,
+    "val": 0.7493,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.7493,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "fmnist|20": {
+   "T": 10,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 2.5,
+    "val": 0.713,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.713,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 10.0,
+    "val": 0.7987,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.7987,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 5.0,
+    "val": 0.7792,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.7792,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "har|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 2.5,
+    "val": 0.9212,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9212,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 10.0,
+    "val": 0.9429,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.9429,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.9579,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9552,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "har|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.9511,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9416,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 1.5,
+    "val": 0.9565,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.9511,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.9565,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9552,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "ledgar_V5000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.6206,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 10.0,
+    "orig_val": 0.6046,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.639,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.6383,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 10.0,
+    "val": 0.6257,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 10.0,
+    "orig_val": 0.6257,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "ledgar_V5000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.707,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7031,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 2.5,
+    "val": 0.6994,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.6994,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.723,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7171,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "mnist|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 2.5,
+    "val": 0.7863,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7863,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 10.0,
+    "val": 0.8365,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.8365,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 5.0,
+    "val": 0.8042,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.8042,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "mnist|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 2.5,
+    "val": 0.8218,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8218,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 10.0,
+    "val": 0.8902,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.8902,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 5.0,
+    "val": 0.8363,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.8363,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "mnist|20": {
+   "T": 10,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 5.0,
+    "val": 0.8453,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.8453,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 10.0,
+    "val": 0.9003,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.9003,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 5.0,
+    "val": 0.8695,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.8695,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "news20_V1000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.5056,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.4354,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.473,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.4479,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.4021,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.3588,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "news20_V1000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.6085,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.5364,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.4994,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.4824,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.4203,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.4153,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "news20_V20000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.5389,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.4285,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.5088,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.399,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.4573,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.3971,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "news20_V20000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.6744,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.5634,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.5552,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.4498,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.5734,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.4812,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "news20_V5000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.5634,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.4893,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 1.5,
+    "val": 0.4567,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.3632,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.4636,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.3601,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "news20_V5000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.675,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.5684,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.5602,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.4649,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.5558,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.421,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "phishing|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.7458,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.6802,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 1.5,
+    "val": 0.9051,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.8486,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 2.5,
+    "val": 0.7718,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7718,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "phishing|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.7311,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7299,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.9254,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.9017,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 10.0,
+    "val": 0.7774,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 10.0,
+    "orig_val": 0.7774,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "r52_V0|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.8018,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7754,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 1.5,
+    "val": 0.7002,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.6839,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.7744,
+    "orig_cfg": "QM90_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.7571,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "r52_V0|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.8791,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8374,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 5.0,
+    "val": 0.7693,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 5.0,
+    "orig_val": 0.7693,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.8476,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7947,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "r52_V0|20": {
+   "T": 10,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.9075,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.872,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.7551,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 5.0,
+    "orig_val": 0.7541,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.873,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8211,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "r52_V1000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.8283,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8191,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 2.5,
+    "val": 0.7154,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.7154,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.7703,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7602,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "r52_V1000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.8384,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8293,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 5.0,
+    "val": 0.7703,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 5.0,
+    "orig_val": 0.7703,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.7917,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7846,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "r52_V1000|20": {
+   "T": 10,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.8689,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8557,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 5.0,
+    "val": 0.8008,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 5.0,
+    "orig_val": 0.8008,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.8537,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8445,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "r52_V5000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.8293,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8059,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.7602,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.7104,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM90_L32_fb1",
+    "s": 1.5,
+    "val": 0.7602,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.749,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "r52_V5000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.8923,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8659,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 5.0,
+    "val": 0.7785,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 5.0,
+    "orig_val": 0.7785,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.8811,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8516,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "r52_V5000|20": {
+   "T": 10,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.8933,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8547,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 10.0,
+    "val": 0.7703,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.7703,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 2.5,
+    "val": 0.811,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.811,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "r8_V5000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 2.5,
+    "val": 0.9057,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9057,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 1.5,
+    "val": 0.8711,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.852,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 5.0,
+    "val": 0.9081,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.9081,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "r8_V5000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.92,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9189,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 2.5,
+    "val": 0.8878,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.8878,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 2.5,
+    "val": 0.9165,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9165,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "r8_V5000|20": {
+   "T": 10,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.9332,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.9153,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.9021,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.8974,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.926,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 5.0,
+    "orig_val": 0.9069,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "rcv1_V5000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.6943,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.6827,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 10.0,
+    "val": 0.5729,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.5729,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 2.5,
+    "val": 0.7103,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7103,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   }
+  },
+  "rcv1_V5000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 2.5,
+    "val": 0.7662,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7662,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 2.5,
+    "val": 0.657,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.657,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.7656,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7399,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "sector_V1000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.2336,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.2009,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 2.5,
+    "val": 0.2196,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.2196,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.1745,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.1184,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "sector_V1000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.2819,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.243,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 2.5,
+    "val": 0.2305,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.2305,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study1/logs/confirm.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.1885,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.1667,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "sector_V20000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.3879,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.296,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 1.5,
+    "val": 0.4393,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.2632,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.4424,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.3349,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "sector_V20000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.6153,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.4829,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.5763,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.3442,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.6215,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.4751,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "sector_V5000|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.3988,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.3458,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.3707,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.2368,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.4128,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.2523,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "sector_V5000|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.6044,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.5171,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.4891,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.3224,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QMR": {
+    "cfg": "QM95_L32_fb1",
+    "s": 1.5,
+    "val": 0.5592,
+    "orig_cfg": "QM95_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.3598,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  }
+ },
+ "s2": {
+  "agnews|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.7894,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.7729,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.6288,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.4353,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "agnews|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.8452,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8264,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.7261,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.4665,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "emotion|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.6135,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.5575,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L64_fb0",
+    "s": 1.5,
+    "val": 0.298,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.2945,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "emotion|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.861,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.769,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.4075,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.3605,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "letter|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 10.0,
+    "val": 0.6484,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 10.0,
+    "orig_val": 0.6484,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 10.0,
+    "val": 0.6522,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.6522,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   }
+  },
+  "letter|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 10.0,
+    "val": 0.678,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 10.0,
+    "orig_val": 0.678,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.7204,
+    "orig_cfg": "QM95_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.7173,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "satimage|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 2.5,
+    "val": 0.8137,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8137,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 2.5,
+    "val": 0.8264,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.8264,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   }
+  },
+  "satimage|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 10.0,
+    "val": 0.8204,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 10.0,
+    "orig_val": 0.8204,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 1.5,
+    "val": 0.8422,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 10.0,
+    "orig_val": 0.8347,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "trec|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 1.5,
+    "val": 0.6703,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.6447,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 2.5,
+    "val": 0.4927,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.4927,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   }
+  },
+  "trec|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 1.5,
+    "val": 0.7436,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.6685,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   },
+   "QM": {
+    "cfg": "QM95_L32_fb0",
+    "s": 1.5,
+    "val": 0.5916,
+    "orig_cfg": "QM95_L64_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.5201,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "usps|5": {
+   "T": 3,
+   "TMR": {
+    "cfg": "AND_L64_fb1",
+    "s": 2.5,
+    "val": 0.8945,
+    "orig_cfg": "AND_L64_fb1",
+    "orig_s": 2.5,
+    "orig_val": 0.8945,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 1.5,
+    "val": 0.9082,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.9082,
+    "changed": true,
+    "conf_log": "/home/claude/qmtm/study5/logs/confirmE1.jsonl"
+   }
+  },
+  "usps|10": {
+   "T": 5,
+   "TMR": {
+    "cfg": "AND_L32_fb1",
+    "s": 10.0,
+    "val": 0.9096,
+    "orig_cfg": "AND_L32_fb1",
+    "orig_s": 10.0,
+    "orig_val": 0.9096,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   },
+   "QM": {
+    "cfg": "QM90_L32_fb0",
+    "s": 2.5,
+    "val": 0.9384,
+    "orig_cfg": "QM90_L32_fb0",
+    "orig_s": 2.5,
+    "orig_val": 0.9384,
+    "changed": false,
+    "conf_log": "/home/claude/qmtm/study2/logs/confirmC.jsonl"
+   }
+  }
+ }
+}

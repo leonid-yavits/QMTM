@@ -1,0 +1,19 @@
+/usr/local/lib/python3.13/site-packages/scipy/stats/_axis_nan_policy.py:601: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.
+  res = hypotest_fun_out(*samples, **kwds)
+E1:S1:TMRext-TMext         n=45 (skip  3) W/L 18/ 8 pos 29 median +2.00 within1  9 sign p=0.0362
+E1:S1:QMext-TMext          n=45 (skip  3) W/L  8/ 2 pos 18 median -0.51 within1 13 sign p=0.9324
+E1:S1:QMRext-TMRext        n=45 (skip  3) W/L  4/ 7 pos 17 median -0.73 within1  8 sign p=0.9638
+E1:S1:bestQM-bestNonQM     n=45 (skip  3) W/L  4/ 2 pos 20 median -0.54 within1 16 sign p=0.8144
+E1:S1:TMRext-TMR           n=45 (skip  3) W/L  7/ 0 pos 31 median +1.37 within1 22 sign p=0.0
+E1:S1:QMext-QM             n=45 (skip  3) W/L  8/ 0 pos 19 median +0.00 within1 29 sign p=0.0033
+E1:S2C:rule-TMext          n=12 (skip  0) W/L  3/ 2 pos  7 median +0.85 within1  4 sign p=0.3872
+E1:S2C:TMRext-TMext        n=12 (skip  0) W/L  2/ 3 pos  5 median -0.67 within1  2 sign p=0.8062
+E1:S2C:QMext-TMext         n=12 (skip  0) W/L  1/ 6 pos  3 median -6.08 within1  4 sign p=0.9807
+E2:S1:TMRnoL-TMRL          n=45 (skip  3) W/L  0/36 pos  0 median -40.50 within1  2 sign p=1.0
+E2:S1:TMRnoL-TMext         n=45 (skip  3) W/L  0/40 pos  0 median -34.59 within1  0 sign p=1.0
+E2:S1:QMnoL-QML            n=45 (skip  3) W/L  0/28 pos  0 median -31.69 within1  3 sign p=1.0
+E2:S1:QMnoL-TMext          n=45 (skip  3) W/L  0/26 pos  1 median -30.71 within1  3 sign p=1.0
+E2:S2C:TMRnoL-TMRL         n=12 (skip  0) W/L  0/10 pos  0 median -45.11 within1  0 sign p=1.0
+E2:S2C:TMRnoL-TMext        n=12 (skip  0) W/L  0/12 pos  0 median -43.66 within1  0 sign p=1.0
+E2:S2C:QMnoL-QML           n=12 (skip  0) W/L  0/ 4 pos  1 median -7.41 within1  1 sign p=0.9998
+E2:S2C:QMnoL-TMext         n=12 (skip  0) W/L  0/ 9 pos  0 median -15.68 within1  1 sign p=1.0
