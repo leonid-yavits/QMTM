@@ -15,7 +15,7 @@ for k, n in names.items():
 m["nsparse"] = len(sp); m["ndense"] = len(de)
 hw = [v for ds in H.values() for k, v in ds.items() if isinstance(v, dict)]
 for cfg in ["L32", "L64", "QM90_L32", "QM95_L64"]:
-    vals = [H[ds][f"{cfg}_s10.0"]["train_overhead_pct"] for ds in H] + [H[ds][f"{cfg}_s2.5"]["train_overhead_pct"] for ds in H]
+    vals = [H[ds][f"{cfg}_s{s}"]["train_overhead_pct"] for ds in H for s in (1.5, 2.5, 5.0, 10.0)]
     m[f"hw{cfg.replace('_','')}min"] = f"{min(vals):.1f}"; m[f"hw{cfg.replace('_','')}max"] = f"{max(vals):.1f}"
 area = [H[ds][f"{k}_s10.0"]["area_overhead_pct"] for ds in H for k in ["L32", "L64", "QM90_L32", "QM95_L32", "QM95_L64"]]
 m["hwareamax"] = f"{max(area):.3f}"; m["hwareamin"] = f"{min(area):.4f}"

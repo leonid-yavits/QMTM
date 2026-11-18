@@ -58,6 +58,9 @@ def row_bits(M, K):
     return M * (N + 1) + 51 + math.ceil(math.log2(max(K, 2)))
 
 
+# Specificity values selected in the experiments (studies 1 to 5), as in the caption of Table 2.
+S_GRID = (1.5, 2.5, 5.0, 10.0)
+
 if __name__ == "__main__":
     D = json.load(open("/home/claude/qmtm/paper/data/datasets.json"))
     out = {}
@@ -67,13 +70,13 @@ if __name__ == "__main__":
         r = dict(M=M, K=K, row_bits=W)
         for cfg, L, th in [("L32", 32, None), ("L64", 64, None), ("QM90_L32", 32, 0.90), ("QM95_L32", 32, 0.95), ("QM95_L64", 64, 0.95)]:
             o = overhead(M, L, th)
-            for s in (2.5, 10.0):
+            for s in S_GRID:
                 b = base_cycles(M, s); x = o["recount"] + o["bias"]
                 r[f"{cfg}_s{s}"] = dict(base_cycles=b, extra_cycles=x, train_overhead_pct=100 * x / b, extra_cols=o["extra_cols"],
                                        area_overhead_pct=100 * o["extra_cols"] / W, tmax=o["tmax"], c=o["c"])
         for cfg, L, th in [("QP1_L64", 64, 0.01), ("QP10_L64", 64, 0.10)]:
             o = qp_overhead(M, L, th)
-            for s in (2.5, 10.0):
+            for s in S_GRID:
                 b = base_cycles(M, s); x = o["recount"] + o["bias"]
                 r[f"{cfg}_s{s}"] = dict(base_cycles=b, extra_cycles=x, train_overhead_pct=100 * x / b, extra_cols=o["extra_cols"],
                                        area_overhead_pct=100 * o["extra_cols"] / W, tmax=TMAX, c=o["c"], cp=o["cp"], infer_cycles=o["infer"],
