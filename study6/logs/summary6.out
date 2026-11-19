@@ -1,3 +1,12 @@
+E2b best adult {'T': 3, 'acc': 35.79690858839186, 'clause_len': 125.139, 'fire': 1.6790641598707932}
+E2b best fmnist {'T': 16, 'acc': 13.17, 'clause_len': 124.5, 'fire': 0.9356666666666666}
+E2b best har {'T': 3, 'acc': 22.27123628548807, 'clause_len': 110.287, 'fire': 5.033995651572848}
+E2b best imdb {'T': 16, 'acc': 81.64266666666667, 'clause_len': 141.08333333333334, 'fire': 36.65822222222222}
+E2b best mnist {'T': 5, 'acc': 27.076666666666664, 'clause_len': 100.389, 'fire': 13.1745}
+E2b best news20_V1000 {'T': 5, 'acc': 34.9862258953168, 'clause_len': 77.886, 'fire': 29.480827559339957}
+E2b best r52_V1000 {'T': 16, 'acc': 64.29220189438173, 'clause_len': 379.35766666666666, 'fire': 36.162845631510486}
+E2b best r8_V5000 {'T': 16, 'acc': 80.77329708503247, 'clause_len': 197.19433333333333, 'fire': 37.28823692292202}
+E2b best sector_V1000 {'T': 3, 'acc': 17.669680906350692, 'clause_len': 192.81233333333333, 'fire': 39.93540914962804}
 E1 vs best binary: median lead 5.66 range -0.01 18.9 ahead 17
    adult 5 84.68 82.89 TM 1.78
    adult 10 84.35 84.36 TM -0.01

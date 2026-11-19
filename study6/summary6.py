@@ -78,6 +78,13 @@ for ds in ("mnist", "fmnist", "imdb"):
     rs = E3[(ds, 4)]; b = best[(ds, 160)]
     S["E3_4"][ds] = dict(fptm=acc(rs), sd=st.stdev(100 * r["test"] for r in rs), best160=b["acc"], arm=b["arm"],
                          sd160=st.stdev(G[(ds, 160, b["cfg"], b["s"], b["T"])]))
+# 6. E2b collapse statistics at the best margin (chosen on test means)
+S["E2b_best"] = {}
+for ds in sorted({k[0] for k in E2b}):
+    T = max((T for (x, T) in E2b if x == ds), key=lambda T: acc(E2b[(ds, T)])); rs = E2b[(ds, T)]
+    S["E2b_best"][ds] = dict(T=T, acc=acc(rs), clause_len=st.mean(r["stats"]["clause_len_mean"] for r in rs),
+                             fire=st.mean(100 * r["stats"]["score_hist"][1] / sum(r["stats"]["score_hist"]) for r in rs))
+    print("E2b best", ds, S["E2b_best"][ds])
 S["best"] = {f"{k[0]}|{k[1]}": v for k, v in best.items() if k[1] in BUD}
 json.dump(S, open(os.path.join(HERE, "logs", "summary6.json"), "w"), indent=1, default=str)
 print("E1 vs best binary: median lead", round(S["E1_vs_best"]["median"], 2), "range", round(S["E1_vs_best"]["min"], 2), round(S["E1_vs_best"]["max"], 2), "ahead", S["E1_vs_best"]["ahead"])
