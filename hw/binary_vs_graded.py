@@ -20,10 +20,11 @@ def c_bits(LF): return math.ceil(math.log2(LF + 1))
 def graded_bitserial(n, LF):
     c = c_bits(LF); thermo = sum(2 + 3 * min(LF, t) for t in range(1, n + 1)); binc = n * (2 + 4 * c + 3) + 4 * c
     return min(thermo, binc)
-def rows_for(name, n, K, arm, C, eq, isqm, n_used=None, LFs=(4, 16, 64)):
-    """Cost ratios for one encoding. n_used: features used by FPTM (default all n, the upper bound)."""
+def rows_for(name, n, K, arm, C, eq, isqm, n_used=None, LFs=(4, 16, 64), fptm_clauses=6):
+    """Cost ratios for one encoding. n_used: features used by FPTM (default all n, the upper bound).
+    fptm_clauses: FPTM clauses per class (default 6, as in Table 9)."""
     nu = n if n_used is None else n_used
-    M = 2 * n; rB, rF = C * K, 6 * K
+    M = 2 * n; rB, rF = C * K, fptm_clauses * K
     res = []
     for LF in LFs:
         c = c_bits(LF)

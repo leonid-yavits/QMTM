@@ -44,3 +44,8 @@ A1 (19 Nov 2026, before any logged study-6 run). The smoke test (adult, L_F = 4,
 Q = L_F check in `fptm6_job.py` compared the 6-decimal rounded quantized-vote accuracy of `run_fptm6.jl` with the unrounded test accuracy at a
 tolerance of 1e-9, so it failed on rounding alone (0.841642 against 0.8416419285). The tolerance is set to the rounding precision (5e-7).
 The check, the runs and the analysis are otherwise unchanged.
+
+A2 (19 Nov 2026, after E1, E2 and part of E3 had run, before any E4 run). E4 is not run, by the author's decision, to shorten
+the study by about 12 to 15 hours of compute (the protocol lists E4 as optional). The equal-accuracy points on MNIST,
+Fashion-MNIST and IMDb therefore rest on the existing binary logs with up to 160 clauses per class. `run6.sh` was stopped
+after E3; `analyze6.py` runs unchanged (it skips a missing E4 log).
