@@ -1,6 +1,6 @@
 """Study 5 tables and macros (study5/PROTOCOL.md). Reads study5/logs/stats5.json, selection5.json, selectionE1b.json,
 sweepE1b.json and study4/logs/stats4.json. Writes, into the paper source directory:
-  tab_controls.tex     Table of baseline controls with a third line per contrast, both arms re-tuned (blue).
+  tab_controls.tex     Table of baseline controls with a third line per contrast, both arms re-tuned.
   tab_noL.tex          Literal-budget ablation (E2).
   numbers_controls5.tex  Macros for the text.
 Sparse: training density below 3 %. Holm within each contrast over all cells of the study (as in stats4/stats5)."""
@@ -32,10 +32,6 @@ def fmt(x):
     return "--" if x != x else f"{x:+.2f}".replace("-", "$-$")
 
 
-def blue(s):
-    return "{\\color{blue}" + s + "}" if s else s
-
-
 M = {}
 L = [r"\begin{tabular}{llcccccc}", r"\toprule",
      r" & & \multicolumn{2}{c}{All cells} & \multicolumn{2}{c}{Sparse} & \multicolumn{2}{c}{Dense} \\",
@@ -60,8 +56,6 @@ for st, c, c5, lab, key in rows_def:
         a, s, d = part(rows, 0, 1), part(rows, 0, .03), part(rows, .03, 1)
         cells = [lab if base == "TM" else "", bl, f"{a['w']}/{a['l']}", fmt(a["med"]), f"{s['w']}/{s['l']}", fmt(s["med"]),
                  f"{d['w']}/{d['l']}", fmt(d["med"])]
-        if new:
-            cells = [blue(x) for x in cells]
         L.append(" & ".join(cells) + r" \\")
         if new:
             for nm, v in (("all", a), ("sparse", s), ("dense", d)):
