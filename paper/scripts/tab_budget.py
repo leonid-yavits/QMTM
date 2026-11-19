@@ -1,7 +1,7 @@
 """Table: clause budget the vanilla TM needs to reach the rule arm at C = 5 and C = 10 (means of seeds 101-103).
 Rule arm per dataset from the study-1 density rule (R1 = TMR below 3 % training density, QM otherwise).
 Two vanilla baselines: the original TM (study 2 part B) and the re-tuned TM (study 4, logs/sweep4.json).
-Per dataset, a second line (blue) uses the re-tuned rule arm (study 5, E1 selection; see sweep5.py).
+Per dataset, a second line (italic) uses the re-tuned rule arm (study 5, E1 selection; see sweep5.py).
 Usage: python3 tab_budget.py [OUTDIR]  (writes OUTDIR/tab_budget.tex)."""
 import json, sys
 from sweep5 import series, CS
@@ -25,8 +25,8 @@ def cell(n):
     return "?" if n == "?" else (str(n) if n else "$>$160")
 
 
-def blue(x):
-    return "{\\color{blue}" + x + "}" if x else x
+def italic(x):
+    return "{\\itshape " + x + "}" if x else x
 
 
 L = [r"\begin{tabular}{lrcrrrrrr}", r"\toprule",
@@ -50,7 +50,7 @@ for ds in DS:
         if tag == "orig":
             L.append(f"{N[ds]} & {dens:.2f} & {'R1' if arm == 'TMR' else 'QM'} & " + " & ".join(cells) + r" \\")
         else:
-            L.append(" & ".join([blue(r"\quad re-tuned"), "", ""] + [blue(c) for c in cells]) + r" \\")
+            L.append(" & ".join([italic(r"\quad re-tuned"), "", ""] + [italic(c) for c in cells]) + r" \\")
 L += [r"\bottomrule", r"\end{tabular}"]
 open(f"{OUT}/tab_budget.tex", "w").write("\n".join(L) + "\n")
 print("\n".join(L))
