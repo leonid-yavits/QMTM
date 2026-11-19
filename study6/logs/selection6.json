@@ -1,0 +1,110 @@
+{
+ "adult|5": {
+  "LF": 16,
+  "val": 0.8367,
+  "used_features": 102,
+  "nf": 162
+ },
+ "adult|10": {
+  "LF": 64,
+  "val": 0.839,
+  "used_features": 162,
+  "nf": 162
+ },
+ "mnist|5": {
+  "LF": 64,
+  "val": 0.9512,
+  "used_features": 737,
+  "nf": 784
+ },
+ "mnist|10": {
+  "LF": 64,
+  "val": 0.9635,
+  "used_features": 760,
+  "nf": 784
+ },
+ "fmnist|5": {
+  "LF": 64,
+  "val": 0.8543,
+  "used_features": 784,
+  "nf": 784
+ },
+ "fmnist|10": {
+  "LF": 64,
+  "val": 0.8705,
+  "used_features": 784,
+  "nf": 784
+ },
+ "har|5": {
+  "LF": 64,
+  "val": 0.9837,
+  "used_features": 3546,
+  "nf": 5610
+ },
+ "har|10": {
+  "LF": 64,
+  "val": 0.981,
+  "used_features": 4535,
+  "nf": 5610
+ },
+ "imdb|5": {
+  "LF": 64,
+  "val": 0.8976,
+  "used_features": 4229,
+  "nf": 5000
+ },
+ "imdb|10": {
+  "LF": 16,
+  "val": 0.9068,
+  "used_features": 3483,
+  "nf": 5000
+ },
+ "r8_V5000|5": {
+  "LF": 16,
+  "val": 0.9284,
+  "used_features": 4356,
+  "nf": 5000
+ },
+ "r8_V5000|10": {
+  "LF": 16,
+  "val": 0.9391,
+  "used_features": 4806,
+  "nf": 5000
+ },
+ "r52_V1000|5": {
+  "LF": 64,
+  "val": 0.8394,
+  "used_features": 1000,
+  "nf": 1000
+ },
+ "r52_V1000|10": {
+  "LF": 4,
+  "val": 0.8648,
+  "used_features": 1000,
+  "nf": 1000
+ },
+ "news20_V1000|5": {
+  "LF": 16,
+  "val": 0.6826,
+  "used_features": 1000,
+  "nf": 1000
+ },
+ "news20_V1000|10": {
+  "LF": 16,
+  "val": 0.7114,
+  "used_features": 1000,
+  "nf": 1000
+ },
+ "sector_V1000|5": {
+  "LF": 64,
+  "val": 0.3146,
+  "used_features": 1000,
+  "nf": 1000
+ },
+ "sector_V1000|10": {
+  "LF": 64,
+  "val": 0.352,
+  "used_features": 1000,
+  "nf": 1000
+ }
+}

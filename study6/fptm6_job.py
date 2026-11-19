@@ -25,7 +25,7 @@ _, curve, te, tt, s_int = res[0].split()
 curve = [float(x) for x in curve.split(",")]
 stats = json.loads(st[0][6:])
 # the quantized vote with Q = LF is the full graded vote: it must reproduce the test accuracy
-assert abs(stats["q_test"][-1] - float(te)) < 1e-9, (stats["q_test"][-1], te)
+assert abs(stats["q_test"][-1] - float(te)) <= 5e-7 + 1e-12, (stats["q_test"][-1], te)   # q_test is rounded to 6 decimals in run_fptm6.jl (amendment A1)
 with open(out, "a") as f:
     f.write(json.dumps(dict(ds=ds, C=CL, T=T, s=float(S), cfg=cfg, arm="FPTM", seed=sd, epochs=EP, clauses_fptm=CL, L=L, LF=LF, s_int=int(s_int),
                             val=curve[-1], val_curve=curve, test=float(te), t=float(tt), stats=stats)) + "\n")

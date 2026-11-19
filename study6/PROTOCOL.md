@@ -39,3 +39,8 @@ Table 9 cost ratios recomputed with the measured used-feature counts (`hw/binary
 hypothesis tests are planned beyond the E1 check; any test added later will be labelled exploratory.
 
 ## Amendments
+
+A1 (19 Nov 2026, before any logged study-6 run). The smoke test (adult, L_F = 4, seed 1, written to a scratch log only) showed that the
+Q = L_F check in `fptm6_job.py` compared the 6-decimal rounded quantized-vote accuracy of `run_fptm6.jl` with the unrounded test accuracy at a
+tolerance of 1e-9, so it failed on rounding alone (0.841642 against 0.8416419285). The tolerance is set to the rounding precision (5e-7).
+The check, the runs and the analysis are otherwise unchanged.
