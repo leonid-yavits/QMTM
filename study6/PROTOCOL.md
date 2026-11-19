@@ -55,3 +55,8 @@ literal budget L = 2 L_F together with L_F, and with L_F = 1 the class sum (at m
 these effects for the binary clause: FPTM with 6 clauses per class, L_F = 1, L = 128 (the budget of the L_F = 64 models),
 T in {3, 5, 16}, the nine E2 datasets, seeds 101 to 103, test. `fptm6_job.py` takes L as an optional eighth argument; the
 configuration name then ends in `_L128`. Descriptive, no tests. Log: `logs/E2b_control.jsonl`.
+
+Note (19 Nov 2026, after internal review round 8; the dated text above is not changed). Two statements above are not
+accurate. (1) E1 does not replace lost records: the per-run records of Study 2 part A exist (`study2/logs/fptm_confirm.jsonl`,
+released on this branch), and E1 reproduces their 90 test accuracies run by run. (2) The E4 paragraph does not call E4
+optional; A2 dropped it. The paper reports both points as stated here.

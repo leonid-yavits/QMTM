@@ -1,15 +1,20 @@
-"""Binary versus graded clause evaluation in the AP(TM) cycle model (Section 8 of the QMTM paper).
-Binary clause (strict TM, R1, QM): one compare + one write per inference (QM needs a threshold-sensed compare).
+"""Binary versus graded clause evaluation in the AP(TM) cycle model (Section 4.6 of "Binary versus graded clause evaluation
+for in-memory Tsetlin machines at small clause budgets").
+Binary clause (vanilla TM, R1, QM): one compare + one write per inference (QM needs a threshold compare).
 Graded clause (FPTM): miss count m_j clipped at L_F, then score max(0, b_j - m_j).
-  Binary-sensed AP: built feature by feature. Per used feature: one compare on the feature's literal columns + one
+  Exact-match search (AP(TM)): built feature by feature. Per used feature: one compare on the feature's literal columns + one
   write (2 cycles), then either a saturating thermometer update (3 cycles per level, min(L_F, t) levels at feature t)
   or a c-bit counter increment with the AP(TM) saturating increment (2c+1 compares + 2c+2 writes, Sec. 4.3),
   c = ceil(log2(L_F + 1)). The cheaper counter is taken. Final clip: a c-bit subtraction, 4c cycles (bound).
-  Threshold-sensed CAM: L_F threshold compares + writes at L_F reference settings (2 L_F cycles).
+  Threshold search (approximate-search CAM): L_F threshold compares + writes at L_F reference settings (2 L_F cycles).
+  Clipping the score at Q < L_F at inference: call rows_for with LFs=(Q,).
 Vote: binary clauses one bit-plane; graded clauses c bit-planes, each reduced like the binary vote (5K+1+log2 rows).
 Energy proxy (cell operations): compare of a full row = M (+ tau_max bias cells for QM) cells; bit-serial step = 1 cell
-per row per cycle. All features in use: an upper bound on the FPTM cost. Break-even used-feature fraction: fraction
-of features FPTM may use before the binary arm loses its energy-efficiency advantage (bit-serial case)."""
+per row per cycle. Break-even used-feature fraction: fraction of features FPTM may use before the binary arm loses its
+energy-efficiency advantage (exact-match search).
+The table of Section 4.6 is produced by study6/summary6.py, which calls rows_for with the measured used-feature counts, the
+measured L_F and the equal-accuracy binary arms. CASES and main() below reproduce only the earlier all-features bound
+(R8 at C = 20), kept for reference; they are not the numbers of the table."""
 import math, json
 TAU = 5
 # encoding: n features, K classes, binary arm, its clauses per class, whether at equal accuracy, arm is QM?

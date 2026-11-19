@@ -47,7 +47,7 @@ for i, ds in enumerate(DS):
     ax.grid(True, color="#e6e6e6", lw=0.5, zorder=0)
     for sp in ("top", "right"): ax.spines[sp].set_visible(False)
     if i % 3 == 0: ax.set_ylabel("Test accuracy (%)")
-    if i // 3 == 2: ax.set_xlabel("Vote levels per clause ($L_F$ or $Q$)")
+    if i // 3 == 2: ax.set_xlabel("Score levels per clause ($L_F$ or $Q$)")
 h = [Line2D([], [], color=C2, marker="o", ms=3.5, lw=1.2, markeredgecolor="white", markeredgewidth=0.4, label="FPTM trained with $L_F$ (E2)"),
      Line2D([], [], color=C1, marker="^", ms=3.5, lw=1.2, markeredgecolor="white", markeredgewidth=0.4, label="Selected FPTM, score clipped at $Q$ (E1)"),
      Line2D([], [], color=CR, lw=0.9, ls=":", label="Best binary arm, $C$ = 5"),
