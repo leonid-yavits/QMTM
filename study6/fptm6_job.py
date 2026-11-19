@@ -1,13 +1,13 @@
 """One study-6 FPTM run (reference FPTM, graded vote) with model logging. Skips keys already in the log.
-python3 fptm6_job.py <ds> <clauses_fptm> <T> <LF> <seed> <epochs> <out.jsonl>
-clauses_fptm is FPTM's clauses_num (per class, split equally by polarity). L = 2*LF. S = 1000 if n >= 1000 else n.
+python3 fptm6_job.py <ds> <clauses_fptm> <T> <LF> <seed> <epochs> <out.jsonl> [L]
+clauses_fptm is FPTM's clauses_num (per class, split equally by polarity). L = 2*LF unless given (amendment A3). S = 1000 if n >= 1000 else n.
 Environment: QMTM_DATA (exported datasets, default /home/claude/data/fptm), JULIA (default julia)."""
 import sys, json, os, subprocess
 ds, CL, T, LF, sd, EP, out = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]), sys.argv[7]
 DATA = os.environ.get("QMTM_DATA", "/home/claude/data/fptm"); JL = os.environ.get("JULIA", "julia")
 nf = int(open(f"{DATA}/{ds}/meta.txt").read().split()[0]); S = 1000 if nf >= 1000 else nf
-L = 2 * LF
-cfg = f"FP_LF{LF}_S{S}"
+L = int(sys.argv[8]) if len(sys.argv) > 8 else 2 * LF
+cfg = f"FP_LF{LF}_S{S}" + ("" if L == 2 * LF else f"_L{L}")
 key = (ds, CL, T, cfg, sd, EP)
 if os.path.exists(out):
     for l in open(out):

@@ -2,8 +2,7 @@
 E2: FPTM trained with L_F in {1, ..., 64} (seeds 101-103).
 E1: the selected FPTM models of the C = 5 cells (L_F from select6.py, seeds 101-105) with every clause score clipped at Q
     at inference (Q threshold searches per clause).
-Reference: best Study 1 arm with 5 clauses per class (Table "FPTM baseline" of the paper; Study 2 part A summaries in the
-supplementary FPTM package, study3/logs/stats3.json).
+Reference: best binary arm with 5 clauses per class, original or re-tuned, over all logs (summary6.py, selected on test means).
 Shaded: L_F <= 4, where the class sum (3 positive clauses, at most 3 L_F) cannot reach the margin T = 16."""
 import json, os, statistics as st, matplotlib
 matplotlib.use("Agg")
@@ -15,8 +14,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..
 OUT = os.environ.get("FIGDIR", os.path.join(HERE, "figures"))
 N = {"adult": "UCI Adult", "mnist": "MNIST", "fmnist": "Fashion-MNIST", "imdb": "IMDb", "har": "UCI HAR", "r8_V5000": "R8 ($V$=5k)",
      "r52_V1000": "R52 ($V$=1k)", "news20_V1000": "20NG ($V$=1k)", "sector_V1000": "Sector ($V$=1k)"}
-B1 = {"adult|5": 80.60, "mnist|5": 84.19, "fmnist|5": 74.71, "imdb|5": 80.62, "har|5": 90.60, "r8_V5000|5": 88.81,
-      "r52_V1000|5": 81.04, "news20_V1000|5": 48.51, "sector_V1000|5": 18.02}
+B1 = {k: v["acc"] for k, v in json.load(open(os.path.join(HERE, "logs", "summary6.json")))["best"].items()}   # summary6.py
 E2, E1 = {}, {}
 for l in open(os.path.join(HERE, "logs", "E2_levels.jsonl")):
     d = json.loads(l); E2.setdefault(d["ds"], {}).setdefault(d["LF"], []).append(100 * d["test"])
@@ -52,7 +50,7 @@ for i, ds in enumerate(DS):
     if i // 3 == 2: ax.set_xlabel("Vote levels per clause ($L_F$ or $Q$)")
 h = [Line2D([], [], color=C2, marker="o", ms=3.5, lw=1.2, markeredgecolor="white", markeredgewidth=0.4, label="FPTM trained with $L_F$ (E2)"),
      Line2D([], [], color=C1, marker="^", ms=3.5, lw=1.2, markeredgecolor="white", markeredgewidth=0.4, label="Selected FPTM, score clipped at $Q$ (E1)"),
-     Line2D([], [], color=CR, lw=0.9, ls=":", label="Best Study 1 arm, $C$ = 5"),
+     Line2D([], [], color=CR, lw=0.9, ls=":", label="Best binary arm, $C$ = 5"),
      Patch(facecolor="#eeeeee", edgecolor="none", label="E2: class sum below $T$")]
 lax.legend(handles=h, loc="center", ncol=4, frameon=False, fontsize=7.2, handletextpad=0.4, columnspacing=1.2, borderaxespad=0)
 os.makedirs(OUT, exist_ok=True)

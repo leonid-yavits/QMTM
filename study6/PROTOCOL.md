@@ -49,3 +49,9 @@ A2 (19 Nov 2026, after E1, E2 and part of E3 had run, before any E4 run). E4 is 
 the study by about 12 to 15 hours of compute (the protocol lists E4 as optional). The equal-accuracy points on MNIST,
 Fashion-MNIST and IMDb therefore rest on the existing binary logs with up to 160 clauses per class. `run6.sh` was stopped
 after E3; `analyze6.py` runs unchanged (it skips a missing E4 log).
+
+A3 (19 Nov 2026, after E1 to E3, before any E2b run; exploratory, added after internal review round 7). E2 changes the
+literal budget L = 2 L_F together with L_F, and with L_F = 1 the class sum (at most 3) is far below T = 16. E2b separates
+these effects for the binary clause: FPTM with 6 clauses per class, L_F = 1, L = 128 (the budget of the L_F = 64 models),
+T in {3, 5, 16}, the nine E2 datasets, seeds 101 to 103, test. `fptm6_job.py` takes L as an optional eighth argument; the
+configuration name then ends in `_L128`. Descriptive, no tests. Log: `logs/E2b_control.jsonl`.
